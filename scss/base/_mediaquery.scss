@@ -46,11 +46,12 @@
         }
 
         &::after{
-            left: 31px;
+            left: 85px;
         }
 
         .step-container{
             width: 80%;
+            margin: 0 auto;
             padding: 10px 25px 10px 80px;
         }
 
@@ -64,6 +65,24 @@
 
 
 @media screen and (max-width: 480px) {
+
+    .hero {
+        ul{
+            max-height: 0;
+            flex-direction: column;
+        }
+    }
+
+    .step-timeline{
+
+        .step-container{
+            width: 100%;
+            padding: 10px 25px 10px 80px;
+        }
+        &::after{
+            left: 31px;
+        }
+    }
 
     .hero{
 

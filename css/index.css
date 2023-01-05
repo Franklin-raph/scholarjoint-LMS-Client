@@ -436,10 +436,11 @@ img {
     left: 10px;
   }
   .step-timeline::after {
-    left: 31px;
+    left: 85px;
   }
   .step-timeline .step-container {
     width: 80%;
+    margin: 0 auto;
     padding: 10px 25px 10px 80px;
   }
   .step-timeline .left-container-arrow, .step-timeline .right-container-arrow {
@@ -449,6 +450,17 @@ img {
   }
 }
 @media screen and (max-width: 480px) {
+  .hero ul {
+    max-height: 0;
+    flex-direction: column;
+  }
+  .step-timeline .step-container {
+    width: 100%;
+    padding: 10px 25px 10px 80px;
+  }
+  .step-timeline::after {
+    left: 31px;
+  }
   .hero-content img {
     width: 100%;
   }
