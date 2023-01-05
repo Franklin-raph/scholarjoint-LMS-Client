@@ -227,6 +227,16 @@ img {
   margin-bottom: 3rem;
   padding: 30px 0;
 }
+.hero nav .toggler {
+  display: none;
+}
+.hero nav .toggler span {
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
+  display: block;
+  margin: 5px 0;
+}
 .hero ul {
   display: flex;
 }
@@ -268,6 +278,10 @@ img {
     transform: translateY(-10%);
   }
 }
+.showNav {
+  max-height: 100vh !important;
+}
+
 @-webkit-keyframes movedown {
   0% {
     opacity: 1;
@@ -278,6 +292,7 @@ img {
     transform: translateY(0px);
   }
 }
+
 @keyframes movedown {
   0% {
     opacity: 1;
@@ -452,13 +467,18 @@ img {
 @media screen and (max-width: 480px) {
   .hero nav {
     position: relative;
+    padding: 30px;
+    width: 100%;
+  }
+  .hero nav .toggler {
+    display: block;
   }
   .hero ul {
     position: absolute;
     background-color: #fff;
     top: 85%;
     text-align: center;
-    width: 100%;
+    width: 86%;
     z-index: 1;
     max-height: 0;
     overflow: hidden;

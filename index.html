@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
@@ -12,9 +13,13 @@
         <div class="container">
             <nav>
                 <h1 class="logo">My Website</h1>
-                <div class="toggler">
+                <div class="toggler" onclick="toggleNav()">
+                    <!-- <i class="ri-layout-grid-fill"></i>
                     <i onclick="openNav()">open</i>
-                    <i onclick="closeNav()">close</i>
+                    <i onclick="closeNav()">close</i> -->
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
                 <ul class="navLinks">
                     <li><a href="#">Home</a></li>
@@ -88,13 +93,13 @@
     </section>
 
     <script>
-        function openNav(){
-            document.querySelector('.hero nav ul').style.maxHeight = "100vh"
+        function toggleNav(){
+            document.querySelector('.hero ul').classList.toggle('showNav')
         }
 
-        function closeNav(){
-            document.querySelector('.hero nav ul').style.maxHeight = "0"
-        }
+        // function closeNav(){
+        //     document.querySelector('.hero nav ul').style.maxHeight = "0"
+        // }
     </script>
 </body>
 </html>

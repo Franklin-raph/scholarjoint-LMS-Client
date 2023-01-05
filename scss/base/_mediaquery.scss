@@ -70,13 +70,19 @@
 
         nav{
             position: relative;
+            padding: 30px;
+            width: 100%;
+
+            .toggler{
+                display: block;
+            }
         }
             ul{
                 position: absolute;
                 background-color: #{$white-color};
                 top: 85%;
                 text-align: center;
-                width: 100%;
+                width: 86%;
                 z-index: 1;
                 max-height: 0;
                 overflow: hidden;
