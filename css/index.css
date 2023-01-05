@@ -38,6 +38,14 @@ img {
   margin: 1rem;
 }
 
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
 .my-1 {
   margin: 1rem 0;
 }
@@ -60,6 +68,14 @@ img {
 
 .m-2 {
   margin: 2rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
 }
 
 .my-2 {
@@ -86,6 +102,14 @@ img {
   margin: 3rem;
 }
 
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
 .my-3 {
   margin: 3rem 0;
 }
@@ -110,6 +134,14 @@ img {
   margin: 4rem;
 }
 
+.mt-4 {
+  margin-top: 4rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
 .my-4 {
   margin: 4rem 0;
 }
@@ -132,6 +164,14 @@ img {
 
 .m-5 {
   margin: 5rem;
+}
+
+.mt-5 {
+  margin-top: 5rem;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
 }
 
 .my-5 {
@@ -176,7 +216,9 @@ img {
 .hero {
   background-color: #0b2150;
   color: #fff;
-  height: 600px;
+  -webkit-clip-path: polygon(100% 0, 100% 86%, 48% 100%, 0 86%, 0 0);
+          clip-path: polygon(100% 0, 100% 86%, 48% 100%, 0 86%, 0 0);
+  height: 650px;
 }
 .hero nav {
   display: flex;
@@ -202,12 +244,11 @@ img {
 }
 .hero-content img {
   width: 50%;
-  -webkit-animation: 12s linear 0s moveY infinite;
-          animation: 12s linear 0s moveY infinite;
+  -webkit-animation: 16s linear 0s moveY infinite;
+          animation: 16s linear 0s moveY infinite;
 }
 .hero-content h1 {
   font-size: 50px;
-  line-height: 1.2;
 }
 
 @-webkit-keyframes moveY {
@@ -296,7 +337,7 @@ img {
   color: #000;
   position: absolute;
   border-radius: 50%;
-  border: 2px solid #0B2150;
+  border: 2px solid #0b2150;
   height: 40px;
   width: 40px;
   top: 30px;
@@ -313,7 +354,7 @@ img {
   position: absolute;
   width: 5px;
   height: 100%;
-  background-color: #0B2150;
+  background-color: #0b2150;
   top: 0;
   left: 50%;
   margin-left: -3px;
@@ -323,7 +364,7 @@ img {
 }
 .step-timeline .text-box {
   padding: 20px 30px;
-  background-color: #0B2150;
+  background-color: #0b2150;
   position: relative;
   border-radius: 7px;
   color: #fff;
@@ -345,7 +386,7 @@ img {
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-right: 15px solid #0B2150;
+  border-right: 15px solid #0b2150;
   left: -15px;
 }
 .step-timeline .left-container-arrow {
@@ -356,11 +397,29 @@ img {
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 15px solid #0B2150;
+  border-left: 15px solid #0b2150;
   right: -15px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .hero {
+    height: 800px;
+  }
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-content h1 {
+    font-size: 30px;
+  }
+  .hero-content img {
+    width: 90%;
+  }
   .step-timeline {
     margin: 50px auto;
   }

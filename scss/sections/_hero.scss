@@ -1,6 +1,7 @@
 .hero{
     @include set-background($primary);
-    height: 600px;
+    clip-path: polygon(100% 0, 100% 86%, 48% 100%, 0 86%, 0 0);
+    height: 650px;
 
     nav{
         display: flex;
@@ -33,12 +34,11 @@
 
         img{
             width: 50%;
-            animation: 12s linear 0s moveY infinite;
+            animation: 16s linear 0s moveY infinite;
         }
 
         h1{
             font-size: 50px;
-            line-height: 1.2;
         }
     }
 }

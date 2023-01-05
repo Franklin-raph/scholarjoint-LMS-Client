@@ -44,10 +44,10 @@
         }
 
         .number{
-            color: #000;
+            color: #{$black-color};
             position: absolute;
             border-radius: 50%;
-            border: 2px solid #0B2150;
+            border: 2px solid #{$primary};
             height: 40px;
             width: 40px;
             top: 30px;
@@ -56,7 +56,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #fff;
+            background-color: #{$white-color};
             font-size: 20px;
         }
     }
@@ -66,7 +66,7 @@
         position: absolute;
         width: 5px;
         height: 100%;
-        background-color: #0B2150;
+        background-color: #{$primary};
         top: 0;
         left: 50%;
         margin-left: -3px;
@@ -76,10 +76,10 @@
 
     .text-box{
         padding: 20px 30px;
-        background-color: #0B2150;
+        background-color: #{$primary};
         position: relative;
         border-radius: 7px;
-        color: #fff;
+        color: #{$white-color};
     }
 
     .left-container{
@@ -96,13 +96,13 @@
 
     .right-container-arrow{
         @include right-and-left-container-arrow;
-        border-right: 15px solid #0B2150;
+        border-right: 15px solid #{$primary};
         left: -15px;
     }
 
     .left-container-arrow{
         @include right-and-left-container-arrow;
-        border-left: 15px solid #0B2150;
+        border-left: 15px solid #{$primary};
         right: -15px;
     }
 }
