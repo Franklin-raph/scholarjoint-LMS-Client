@@ -450,9 +450,26 @@ img {
   }
 }
 @media screen and (max-width: 480px) {
+  .hero nav {
+    position: relative;
+  }
   .hero ul {
+    position: absolute;
+    background-color: #fff;
+    top: 85%;
+    text-align: center;
+    width: 100%;
+    z-index: 1;
     max-height: 0;
+    overflow: hidden;
     flex-direction: column;
+    transition: 0.5s ease-in-out;
+  }
+  .hero ul li {
+    margin: 20px 0;
+  }
+  .hero ul a {
+    color: #000;
   }
   .step-timeline .step-container {
     width: 100%;

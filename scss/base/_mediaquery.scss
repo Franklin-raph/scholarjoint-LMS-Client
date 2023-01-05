@@ -67,10 +67,30 @@
 @media screen and (max-width: 480px) {
 
     .hero {
-        ul{
-            max-height: 0;
-            flex-direction: column;
+
+        nav{
+            position: relative;
         }
+            ul{
+                position: absolute;
+                background-color: #{$white-color};
+                top: 85%;
+                text-align: center;
+                width: 100%;
+                z-index: 1;
+                max-height: 0;
+                overflow: hidden;
+                flex-direction: column;
+                transition: .5s ease-in-out;
+
+                li{
+                    margin: 20px 0;
+                }
+
+                a{
+                    color: #{$black-color};
+                }
+            }
     }
 
     .step-timeline{
