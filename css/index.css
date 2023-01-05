@@ -202,11 +202,21 @@ img {
 }
 .hero-content img {
   width: 50%;
-  animation: 12s linear 0s moveY infinite;
+  -webkit-animation: 12s linear 0s moveY infinite;
+          animation: 12s linear 0s moveY infinite;
 }
 .hero-content h1 {
   font-size: 50px;
   line-height: 1.2;
+}
+
+@-webkit-keyframes moveY {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
 }
 
 @keyframes moveY {
@@ -217,6 +227,16 @@ img {
     transform: translateY(-10%);
   }
 }
+@-webkit-keyframes movedown {
+  0% {
+    opacity: 1;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 @keyframes movedown {
   0% {
     opacity: 1;
@@ -225,6 +245,14 @@ img {
   100% {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+@-webkit-keyframes moveline {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
   }
 }
 @keyframes moveline {
@@ -244,20 +272,25 @@ img {
   padding: 10px 50px;
   position: relative;
   width: 50%;
-  animation: movedown 1s linear forwards;
+  -webkit-animation: movedown 1s linear forwards;
+          animation: movedown 1s linear forwards;
   opacity: 0;
 }
 .step-timeline .step-container:nth-child(1) {
-  animation-delay: 0s;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
 }
 .step-timeline .step-container:nth-child(2) {
-  animation-delay: 2s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 .step-timeline .step-container:nth-child(3) {
-  animation-delay: 3s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 .step-timeline .step-container:nth-child(4) {
-  animation-delay: 5s;
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
 }
 .step-timeline .step-container .number {
   color: #000;
@@ -285,7 +318,8 @@ img {
   left: 50%;
   margin-left: -3px;
   z-index: -1;
-  animation: moveline 6s linear forwards;
+  -webkit-animation: moveline 6s linear forwards;
+          animation: moveline 6s linear forwards;
 }
 .step-timeline .text-box {
   padding: 20px 30px;
@@ -325,3 +359,27 @@ img {
   border-left: 15px solid #0B2150;
   right: -15px;
 }
+
+@media screen and (max-width: 600px) {
+  .step-timeline {
+    margin: 50px auto;
+  }
+  .step-timeline .right-container {
+    left: 0;
+  }
+  .step-timeline .left-container .number, .step-timeline .right-container .number {
+    left: 10px;
+  }
+  .step-timeline::after {
+    left: 31px;
+  }
+  .step-timeline .step-container {
+    width: 80%;
+    padding: 10px 25px 10px 80px;
+  }
+  .step-timeline .left-container-arrow, .step-timeline .right-container-arrow {
+    border-right: 15px solid #0B2150;
+    border-left: 0;
+    left: -15px;
+  }
+}/*# sourceMappingURL=index.css.map */

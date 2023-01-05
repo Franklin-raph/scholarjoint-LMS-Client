@@ -1,0 +1,28 @@
+@media screen and (max-width:600px) {
+    .step-timeline{
+        margin: 50px auto;
+
+        .right-container{
+            left: 0;
+        }
+
+        .left-container .number, .right-container .number{
+            left: 10px;
+        }
+
+        &::after{
+            left: 31px;
+        }
+
+        .step-container{
+            width: 80%;
+            padding: 10px 25px 10px 80px;
+        }
+
+        .left-container-arrow, .right-container-arrow{
+            border-right: 15px solid #0B2150;
+            border-left: 0;
+            left: -15px;
+        }
+    }
+}
