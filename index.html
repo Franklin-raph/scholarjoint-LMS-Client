@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <nav>
+                <h1 class="logo">My Website</h1>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li class="mx-2"><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </nav>
+
+            <div class="hero-content">
+                <div>
+                    <h1>Everything you need to LEARN.</h1>
+                    <p class="my-1">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est
+                        eligendi tempore atque laborum. Quisquam nemo at non. Corrupti,
+                        vitae dolore.
+                    </p>
+                    <a href="#" class="btn-primary">Learn More</a>
+                    <a href="#" class="btn-secondary">Sign Up</a>
+                </div>
+                <img
+                    src="/images/register-img.png"
+                />
+            </div>
+        </div>
+    </header>
+
+    <section class="step-timeline">
+        <div class="step-container left-container">
+            <div class="number">1</div>
+            <div class="text-box">
+                <h3>STEP 1</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, consequatur?
+                </p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+
+        <div class="step-container right-container">
+            <div class="number">2</div>
+            <div class="text-box">
+                <h3>STEP 2</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, consequatur?
+                </p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+
+        <div class="step-container left-container">
+            <div class="number">3</div>
+            <div class="text-box">
+                <h3>STEP 3</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, consequatur?
+                </p>
+                <span class="left-container-arrow"></span>
+            </div>
+        </div>
+
+        <div class="step-container right-container">
+            <div class="number">4</div>
+            <div class="text-box">
+                <h3>STEP 4</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, consequatur?
+                </p>
+                <span class="right-container-arrow"></span>
+            </div>
+        </div>
+
+    </section>
+
+    <style>
+        /* .step-timeline{
+            position: relative;
+            max-width: 900px;
+            margin: 100px auto;
+        }
+
+        .step-timeline .step-container{
+            padding: 10px 50px;
+            position: relative;
+            width: 50%;
+            animation: movedown 1s linear forwards;
+            opacity: 0;
+        } */
+
+        /* @keyframes movedown {
+            0%{
+                opacity: 1;
+                transform: translateY(-30px);
+            }
+            100%{
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        } */
+
+        /* .step-timeline .step-container:nth-child(1){
+            animation-delay: 0s;
+        }
+
+        .step-timeline .step-container:nth-child(2){
+            animation-delay: 2s;
+        }
+
+        .step-timeline .step-container:nth-child(3){
+            animation-delay: 3s;
+        }
+
+        .step-timeline .step-container:nth-child(4){
+            animation-delay: 5s;
+        } */
+
+        /* .text-box{
+            padding: 20px 30px;
+            background-color: #0B2150;
+            position: relative;
+            border-radius: 7px;
+            color: #fff;
+        }
+
+        .left-container{
+            left: 0;
+        }
+
+        .right-container{
+            left: 50%;
+        } */
+
+        /* .number{
+            color: #000;
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid #0B2150;
+            height: 40px;
+            width: 40px;
+            top: 30px;
+            right: -20px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fff;
+            font-size: 20px;
+        } */
+
+        /* .right-container .number{
+            left: -20px;
+        } */
+
+        /* .step-timeline::after{
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 100%;
+            background-color: #0B2150;
+            top: 0;
+            left: 50%;
+            margin-left: -3px;
+            z-index: -1;
+            animation: moveline 6s linear forwards;
+        } */
+
+        /* @keyframes moveline {
+            0%{
+                height: 0;
+            }
+            100%{
+                height: 100%;
+            }
+        } */
+
+        /* .left-container-arrow{
+            height: 0;
+            width: 0;
+            position: absolute;
+            top: 28px;
+            z-index: 1;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 15px solid #0B2150;
+            right: -15px;
+        } */
+
+        /* .right-container-arrow{
+            height: 0;
+            width: 0;
+            position: absolute;
+            top: 28px;
+            z-index: 1;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-right: 15px solid #0B2150;
+            left: -15px;
+        } */
+
+        @media screen and (max-width:600px) {
+            .step-timeline{
+                margin: 50px auto;
+            }
+            .step-timeline::after{
+                left: 31px;
+            }
+
+            .step-timeline .step-container{
+                width: 80%;
+                padding: 10px 25px 10px 80px;
+            }
+
+            .right-container{
+                left: 0;
+            }
+
+            .left-container .number, .right-container .number{
+                left: 10px;
+            }
+
+            .left-container-arrow, .right-container-arrow{
+                border-right: 15px solid #0B2150;
+                border-left: 0;
+                left: -15px;
+            }
+        }
+        
+
+    </style>
+
+    
+
+</body>
+</html>

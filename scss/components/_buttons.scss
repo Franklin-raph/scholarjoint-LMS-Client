@@ -1,0 +1,22 @@
+// create a shared style
+%btn{
+    display: inline-block;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin: 3px;
+    color: $white-color;
+
+    &:hover{
+        transform: scale(.98);
+    }
+}
+
+.btn-primary{
+    @extend %btn;
+    background-color: lighten($primary,  10%);
+}
+
+.btn-secondary{
+    @extend %btn;
+    background-color: $secondary;
+}
