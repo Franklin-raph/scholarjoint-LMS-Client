@@ -409,6 +409,8 @@ img {
 @media screen and (max-width: 700px) {
   .hero {
     height: 800px;
+    -webkit-clip-path: polygon(100% 0, 100% 97%, 48% 100%, 0 97%, 0 0);
+            clip-path: polygon(100% 0, 100% 97%, 48% 100%, 0 97%, 0 0);
   }
   .hero-content {
     flex-direction: column-reverse;
@@ -418,7 +420,11 @@ img {
     font-size: 30px;
   }
   .hero-content img {
-    width: 90%;
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+  .hero .container {
+    padding: 0 10px;
   }
   .step-timeline {
     margin: 50px auto;
@@ -440,5 +446,13 @@ img {
     border-right: 15px solid #0B2150;
     border-left: 0;
     left: -15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .hero-content img {
+    width: 100%;
+  }
+  .hero .container {
+    padding: 0 10px;
   }
 }/*# sourceMappingURL=index.css.map */
