@@ -18,10 +18,16 @@
     }
 }
 
+#timeSection{
+    h1{
+        @include headingFonts
+    }
+}
+
 .step-timeline{
     position: relative;
     max-width: 900px;
-    margin: 100px auto;
+    margin: 10px auto;
 
     .step-container{
         padding: 10px 50px;

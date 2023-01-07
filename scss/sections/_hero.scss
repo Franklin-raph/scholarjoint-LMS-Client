@@ -1,8 +1,9 @@
 .hero{
     @include set-background($primary);
-    clip-path: polygon(100% 0, 100% 86%, 48% 100%, 0 86%, 0 0);
+    clip-path: polygon(100% 0, 100% 86%, 50% 100%, 0 86%, 0 0);
     height: 650px;
-
+    @include sectionBottomSpacing;
+    
     nav{
         display: flex;
         align-items: center;
