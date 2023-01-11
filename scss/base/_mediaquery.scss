@@ -1,3 +1,13 @@
+@media screen and (max-width:1200px) {
+    #features{
+
+        .featuresContainer{
+            width: 100%;
+        }
+    }
+}
+
+
 @media screen and (max-width:992px) {
     .hero{
     
@@ -10,13 +20,37 @@
     }
 
     #courses{
-        
+
         .topInfo{
     
             p{
                 font-size: 18px;
                 width: 70%;
             }
+        }
+    }
+
+    #timeSection{
+        .timeSectionParagraph{
+            font-size: 18px;
+            width: 70%;
+        }
+    }
+
+    #features{
+
+        .featuresContainer{
+            padding: 10px .5rem;
+            width: 90%;
+
+            .feature{
+                width: 90%;
+            }
+        }
+
+        .featuresParagraph{
+            font-size: 18px;
+            width: 70%;
         }
     }
 }
@@ -80,6 +114,29 @@
                 font-size: 16px;
                 width: 90%;
             }
+        }
+    }
+
+    #timeSection{
+        .timeSectionParagraph{
+            font-size: 16px;
+            width: 90%;
+        }
+    }
+
+    #features{
+
+        .featuresContainer{
+            grid-template-columns: 1fr;
+
+            .feature{
+                width: 100%;
+            }
+        }
+
+        .featuresParagraph{
+            font-size: 16px;
+            width: 90%;
         }
     }
 }

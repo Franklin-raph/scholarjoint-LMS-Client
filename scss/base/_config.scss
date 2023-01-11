@@ -87,3 +87,10 @@ section{
     font-size: 2em;
     text-transform: uppercase;
 }
+
+@mixin centerParagraph(){
+    font-size: 20px;
+    width: 50%;
+    margin: 0 auto 4rem;
+    text-align: center;
+}

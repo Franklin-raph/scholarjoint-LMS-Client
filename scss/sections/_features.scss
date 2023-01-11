@@ -3,6 +3,10 @@
         @include headingFonts
     }
 
+    .featuresParagraph{
+        @include centerParagraph;
+    }
+
     .featuresContainer{
         display: grid;
         grid-template-columns: repeat(2, 1fr);

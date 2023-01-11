@@ -330,6 +330,12 @@ section {
   font-size: 2em;
   text-transform: uppercase;
 }
+#timeSection .timeSectionParagraph {
+  font-size: 20px;
+  width: 50%;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
 
 .step-timeline {
   position: relative;
@@ -434,6 +440,12 @@ section {
   font-size: 2em;
   text-transform: uppercase;
 }
+#features .featuresParagraph {
+  font-size: 20px;
+  width: 50%;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
 #features .featuresContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -475,7 +487,8 @@ section {
 #courses .topInfo p {
   font-size: 20px;
   width: 50%;
-  margin: 0 auto;
+  margin: 0 auto 4rem;
+  text-align: center;
 }
 #courses .courseCards {
   display: flex;
@@ -530,11 +543,31 @@ section {
   gap: 5px;
 }
 
+@media screen and (max-width: 1200px) {
+  #features .featuresContainer {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 992px) {
   .hero-content h1 {
     font-size: 30px;
   }
   #courses .topInfo p {
+    font-size: 18px;
+    width: 70%;
+  }
+  #timeSection .timeSectionParagraph {
+    font-size: 18px;
+    width: 70%;
+  }
+  #features .featuresContainer {
+    padding: 10px 0.5rem;
+    width: 90%;
+  }
+  #features .featuresContainer .feature {
+    width: 90%;
+  }
+  #features .featuresParagraph {
     font-size: 18px;
     width: 70%;
   }
@@ -582,6 +615,20 @@ section {
     left: -15px;
   }
   #courses .topInfo p {
+    font-size: 16px;
+    width: 90%;
+  }
+  #timeSection .timeSectionParagraph {
+    font-size: 16px;
+    width: 90%;
+  }
+  #features .featuresContainer {
+    grid-template-columns: 1fr;
+  }
+  #features .featuresContainer .feature {
+    width: 100%;
+  }
+  #features .featuresParagraph {
     font-size: 16px;
     width: 90%;
   }

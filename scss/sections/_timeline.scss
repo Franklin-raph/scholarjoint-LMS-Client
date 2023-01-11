@@ -22,6 +22,10 @@
     h1{
         @include headingFonts
     }
+    
+    .timeSectionParagraph{
+        @include centerParagraph;
+    }
 }
 
 .step-timeline{
