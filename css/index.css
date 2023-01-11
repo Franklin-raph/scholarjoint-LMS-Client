@@ -27,6 +27,10 @@ img {
   width: 100%;
 }
 
+section {
+  margin-bottom: 5rem;
+}
+
 .container {
   max-width: 1200px;
   padding: 0 30px;
@@ -219,7 +223,7 @@ img {
   -webkit-clip-path: polygon(100% 0, 100% 86%, 50% 100%, 0 86%, 0 0);
           clip-path: polygon(100% 0, 100% 86%, 50% 100%, 0 86%, 0 0);
   height: 650px;
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 .hero nav {
   display: flex;
@@ -322,7 +326,6 @@ img {
 }
 #timeSection h1 {
   text-align: center;
-  margin-bottom: 2.5rem;
   color: #0b2150;
   font-size: 2em;
   text-transform: uppercase;
@@ -427,7 +430,6 @@ img {
 
 #features h1 {
   text-align: center;
-  margin-bottom: 2.5rem;
   color: #0b2150;
   font-size: 2em;
   text-transform: uppercase;
@@ -439,7 +441,6 @@ img {
   gap: 2rem;
   width: 80%;
   margin: 0 auto;
-  margin-bottom: 5rem;
 }
 #features .featuresContainer .feature {
   display: flex;
@@ -461,9 +462,81 @@ img {
   background-color: #1ac888;
 }
 
+#courses h1 {
+  text-align: center;
+  color: #0b2150;
+  font-size: 2em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+#courses .topInfo {
+  text-align: center;
+}
+#courses .topInfo p {
+  font-size: 20px;
+  width: 50%;
+  margin: 0 auto;
+}
+#courses .courseCards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+#courses .courseCards p, #courses .courseCards li {
+  color: #616161;
+}
+#courses .courseCards li {
+  font-size: 14px;
+}
+#courses .courseCards li i {
+  color: #1ac888;
+}
+#courses .courseCards .course {
+  margin: 2rem;
+  box-shadow: 3px 3px 5px #eee;
+}
+#courses .courseCards .course img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+#courses .courseCards .course .courseInfo {
+  padding: 10px 10px;
+}
+#courses .courseCards .course .courseInfo .courseFormat {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 10px 0;
+  border-bottom: 1px solid #cacaca;
+  padding-bottom: 10px;
+}
+#courses .courseCards .course .courseInfo .courseFormat p {
+  font-size: 14px;
+  background-color: red;
+  padding: 2px 7px;
+  border-radius: 4px;
+  color: #fff;
+}
+#courses .courseCards .course .courseInfo .courseFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#courses .courseCards .course .courseInfo .courseFooter div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
 @media screen and (max-width: 992px) {
   .hero-content h1 {
     font-size: 30px;
+  }
+  #courses .topInfo p {
+    font-size: 18px;
+    width: 70%;
   }
 }
 @media screen and (max-width: 700px) {
@@ -507,6 +580,10 @@ img {
     border-right: 15px solid #0B2150;
     border-left: 0;
     left: -15px;
+  }
+  #courses .topInfo p {
+    font-size: 16px;
+    width: 90%;
   }
 }
 @media screen and (max-width: 480px) {
