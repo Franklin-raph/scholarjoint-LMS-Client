@@ -1,0 +1,39 @@
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #{$primary};
+    color: #{$white-color};
+    padding: 50px 50px 30px;
+
+    .contactContainer, .linksContainer{
+        text-align: center
+    }
+
+    a{
+        color: $white-color;
+    }
+
+    a:hover{
+        color: $secondary;
+    }
+
+    .links{
+        display: flex;
+        gap: 15px;
+    }
+
+    .contacts{
+        a{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            div{
+                display: flex;
+                align-items: center;
+                gap: 3px;
+            }
+        }
+    }
+}

@@ -57,6 +57,18 @@
     #counter{
         padding: 50px 25px;
     }
+
+    footer{
+        flex-direction: column-reverse;
+        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .links{
+            gap: 7px;
+        }
+    }
 }
 
 

@@ -25,21 +25,22 @@ $space: 1.25rem;
 // reset styles
 *,
 *::after,
-*::before
-{
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body{
+html,
+body {
     font-family: "Poppins";
     overflow-x: hidden;
     width: 100%;
     position: relative;
+    scroll-behavior: smooth;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -48,18 +49,20 @@ ul {
     list-style: none;
 }
 
-img{
+img {
     width: 100%;
 }
 
-section{
+section {
     margin-bottom: 5rem
 }
 
-@function set-text-color($color){
-    @if(lightness($color) > 70){
+@function set-text-color($color) {
+    @if(lightness($color) > 70) {
         @return #333;
-    } @else {
+    }
+
+    @else {
         @return #fff;
     }
 }
@@ -70,7 +73,7 @@ section{
     color: set-text-color(($color));
 }
 
-@mixin right-and-left-container-arrow(){
+@mixin right-and-left-container-arrow() {
     height: 0;
     width: 0;
     position: absolute;
@@ -80,7 +83,7 @@ section{
     border-bottom: 15px solid transparent;
 }
 
-@mixin headingFonts(){
+@mixin headingFonts() {
     text-align: center;
     // margin-bottom: 2.5rem;
     color: #{$primary};
@@ -88,7 +91,7 @@ section{
     text-transform: uppercase;
 }
 
-@mixin centerParagraph(){
+@mixin centerParagraph() {
     font-size: 20px;
     width: 50%;
     margin: 0 auto 4rem;

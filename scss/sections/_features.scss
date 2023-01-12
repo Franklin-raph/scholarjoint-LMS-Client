@@ -15,15 +15,19 @@
         width: 80%;
         margin: 0 auto;
 
+        p{
+            color: #616161;
+        }
+
         .feature{
             display: flex;
             align-items: flex-start;
             justify-content: center;
             gap: 10px;
-            width: 80%;
+            width: 100%;
     
             h3{
-                font-size: 24px;
+                font-size: 20px;
                 color: #{$primary};
             }
     
