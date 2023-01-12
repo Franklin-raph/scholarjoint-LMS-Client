@@ -324,6 +324,10 @@ section {
     height: 100%;
   }
 }
+#timeSection {
+  background-color: #f1f1f1;
+  padding: 5rem 0;
+}
 #timeSection h1 {
   text-align: center;
   color: #0b2150;
@@ -341,6 +345,7 @@ section {
   position: relative;
   max-width: 900px;
   margin: 10px auto;
+  z-index: 1;
 }
 .step-timeline .step-container {
   padding: 10px 50px;
@@ -375,7 +380,7 @@ section {
   width: 40px;
   top: 30px;
   right: -20px;
-  z-index: 10;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -541,6 +546,21 @@ section {
   align-items: center;
   justify-content: center;
   gap: 5px;
+}
+
+#counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.884), rgba(0, 0, 0, 0.884)), url("/images/download (1).jpg");
+  height: 30vh;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 50px;
+}
+#counter .numanddesc {
+  display: flex;
 }
 
 @media screen and (max-width: 1200px) {

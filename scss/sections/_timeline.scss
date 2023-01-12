@@ -26,12 +26,16 @@
     .timeSectionParagraph{
         @include centerParagraph;
     }
+
+    background-color: #f1f1f1;
+    padding: 5rem 0;
 }
 
 .step-timeline{
     position: relative;
     max-width: 900px;
     margin: 10px auto;
+    z-index: 1;
 
     .step-container{
         padding: 10px 50px;
@@ -62,7 +66,7 @@
             width: 40px;
             top: 30px;
             right: -20px;
-            z-index: 10;
+            z-index: 1;
             display: flex;
             align-items: center;
             justify-content: center;

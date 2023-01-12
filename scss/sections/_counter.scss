@@ -1,0 +1,16 @@
+#counter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.884), rgba(0,0,0, 0.884)),
+    url('/images/download\ \(1\).jpg');
+    height: 30vh;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 50px;
+
+    .numanddesc{
+        display: flex;
+    }
+}
