@@ -53,6 +53,10 @@
             width: 70%;
         }
     }
+
+    #counter{
+        padding: 50px 25px;
+    }
 }
 
 
@@ -139,6 +143,12 @@
             width: 90%;
         }
     }
+
+    #counter{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 50px;
+        padding: 50px 20px;
+    }
 }
 
 
@@ -198,6 +208,25 @@
         }
         .container{
             padding: 0 10px;
+        }
+    }
+
+    #counter{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+       
+        .numanddesc{
+    
+            div{
+    
+                span{
+                    font-size: 18px;
+                }
+    
+                h3{
+                    font-size: 24px;
+                }
+            }
         }
     }
 }

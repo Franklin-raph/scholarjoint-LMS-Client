@@ -549,18 +549,35 @@ section {
 }
 
 #counter {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.884), rgba(0, 0, 0, 0.884)), url("/images/download (1).jpg");
-  height: 30vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/images/codingbanner.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
   color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 0 50px;
+  padding: 50px;
 }
 #counter .numanddesc {
+  text-align: center;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#counter .numanddesc div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+#counter .numanddesc div span {
+  font-size: 22px;
+}
+#counter .numanddesc div h3 {
+  font-size: 30px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -590,6 +607,9 @@ section {
   #features .featuresParagraph {
     font-size: 18px;
     width: 70%;
+  }
+  #counter {
+    padding: 50px 25px;
   }
 }
 @media screen and (max-width: 700px) {
@@ -652,6 +672,11 @@ section {
     font-size: 16px;
     width: 90%;
   }
+  #counter {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 50px;
+    padding: 50px 20px;
+  }
 }
 @media screen and (max-width: 480px) {
   .hero nav {
@@ -692,5 +717,15 @@ section {
   }
   .hero .container {
     padding: 0 10px;
+  }
+  #counter {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+  }
+  #counter .numanddesc div span {
+    font-size: 18px;
+  }
+  #counter .numanddesc div h3 {
+    font-size: 24px;
   }
 }/*# sourceMappingURL=index.css.map */

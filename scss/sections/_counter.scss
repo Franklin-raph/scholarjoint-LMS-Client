@@ -1,16 +1,36 @@
 #counter{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.884), rgba(0,0,0, 0.884)),
-    url('/images/download\ \(1\).jpg');
-    height: 30vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url('/images/codingbanner.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
     color: #fff;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 0 50px;
+    padding: 50px;
 
     .numanddesc{
+        text-align: center;
         display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        div{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            span{
+                font-size: 22px;
+            }
+
+            h3{
+                font-size: 30px;
+            }
+        }
     }
 }
