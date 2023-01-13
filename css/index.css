@@ -219,6 +219,81 @@ section {
   background-color: #1ac888;
 }
 
+.showModal {
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+#signupmodal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+#signupmodal form {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem;
+  position: relative;
+}
+#signupmodal form i {
+  position: absolute;
+  top: 3%;
+  right: 2%;
+  font-size: 22px;
+  cursor: pointer;
+}
+#signupmodal form i:hover {
+  color: #d32752;
+}
+#signupmodal form .names {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+#signupmodal form .names input {
+  border: 1px solid rgb(214, 214, 214);
+  padding: 10px;
+  border-radius: 5px;
+  width: 220px;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+}
+#signupmodal form .email {
+  border: 1px solid rgb(214, 214, 214);
+  padding: 10px;
+  width: 460px;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+}
+#signupmodal form .signup {
+  font-family: "Poppins", sans-serif;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #1ac888;
+  cursor: pointer;
+}
+
 .hero {
   background-color: #0b2150;
   color: #fff;
@@ -686,7 +761,8 @@ footer .contacts a div {
   .step-timeline .right-container {
     left: 0;
   }
-  .step-timeline .left-container .number, .step-timeline .right-container .number {
+  .step-timeline .left-container .number,
+.step-timeline .right-container .number {
     left: 10px;
   }
   .step-timeline::after {
@@ -697,7 +773,8 @@ footer .contacts a div {
     margin: 0 auto;
     padding: 10px 25px 10px 80px;
   }
-  .step-timeline .left-container-arrow, .step-timeline .right-container-arrow {
+  .step-timeline .left-container-arrow,
+.step-timeline .right-container-arrow {
     border-right: 15px solid #0B2150;
     border-left: 0;
     left: -15px;
@@ -724,6 +801,17 @@ footer .contacts a div {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 50px;
     padding: 50px 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #signupmodal form {
+    width: 85%;
+  }
+  #signupmodal form .names input {
+    width: 180px;
+  }
+  #signupmodal form .email {
+    width: 380px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -775,5 +863,18 @@ footer .contacts a div {
   }
   #counter .numanddesc div h3 {
     font-size: 24px;
+  }
+  #signupmodal form {
+    padding: 3rem 1rem;
+  }
+  #signupmodal form .names {
+    flex-direction: column;
+    width: 100%;
+  }
+  #signupmodal form .names input {
+    width: 100%;
+  }
+  #signupmodal form .email {
+    width: 100%;
   }
 }/*# sourceMappingURL=index.css.map */

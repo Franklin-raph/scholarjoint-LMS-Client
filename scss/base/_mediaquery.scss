@@ -1,7 +1,7 @@
 @media screen and (max-width:1200px) {
-    #features{
+    #features {
 
-        .featuresContainer{
+        .featuresContainer {
             width: 100%;
         }
     }
@@ -9,63 +9,63 @@
 
 
 @media screen and (max-width:992px) {
-    .hero{
-    
-        &-content{
-    
-            h1{
+    .hero {
+
+        &-content {
+
+            h1 {
                 font-size: 30px;
             }
         }
     }
 
-    #courses{
+    #courses {
 
-        .topInfo{
-    
-            p{
+        .topInfo {
+
+            p {
                 font-size: 18px;
                 width: 70%;
             }
         }
     }
 
-    #timeSection{
-        .timeSectionParagraph{
+    #timeSection {
+        .timeSectionParagraph {
             font-size: 18px;
             width: 70%;
         }
     }
 
-    #features{
+    #features {
 
-        .featuresContainer{
+        .featuresContainer {
             padding: 10px .5rem;
             width: 90%;
 
-            .feature{
+            .feature {
                 width: 90%;
             }
         }
 
-        .featuresParagraph{
+        .featuresParagraph {
             font-size: 18px;
             width: 70%;
         }
     }
 
-    #counter{
+    #counter {
         padding: 50px 25px;
     }
 
-    footer{
+    footer {
         flex-direction: column-reverse;
         gap: 50px;
         align-items: center;
         justify-content: center;
         text-align: center;
 
-        .links{
+        .links {
             gap: 7px;
         }
     }
@@ -74,92 +74,114 @@
 
 @media screen and (max-width:700px) {
 
-    .hero{
+    .hero {
         height: 800px;
         clip-path: polygon(100% 0, 100% 97%, 48% 100%, 0 97%, 0 0);
 
-        &-content{
+        &-content {
             flex-direction: column-reverse;
             text-align: center;
-            h1{
+
+            h1 {
                 font-size: 30px;
             }
 
-            img{
+            img {
                 width: 80%;
                 margin-bottom: 2rem;
-            }    
+            }
         }
-        .container{
+
+        .container {
             padding: 0 10px;
         }
     }
 
-    .step-timeline{
+    .step-timeline {
         margin: 50px auto;
 
-        .right-container{
+        .right-container {
             left: 0;
         }
 
-        .left-container .number, .right-container .number{
+        .left-container .number,
+        .right-container .number {
             left: 10px;
         }
 
-        &::after{
+        &::after {
             left: 85px;
         }
 
-        .step-container{
+        .step-container {
             width: 80%;
             margin: 0 auto;
             padding: 10px 25px 10px 80px;
         }
 
-        .left-container-arrow, .right-container-arrow{
+        .left-container-arrow,
+        .right-container-arrow {
             border-right: 15px solid #0B2150;
             border-left: 0;
             left: -15px;
         }
     }
 
-    #courses{
-        .topInfo{
-    
-            p{
+    #courses {
+        .topInfo {
+
+            p {
                 font-size: 16px;
                 width: 90%;
             }
         }
     }
 
-    #timeSection{
-        .timeSectionParagraph{
+    #timeSection {
+        .timeSectionParagraph {
             font-size: 16px;
             width: 90%;
         }
     }
 
-    #features{
+    #features {
 
-        .featuresContainer{
+        .featuresContainer {
             grid-template-columns: 1fr;
 
-            .feature{
+            .feature {
                 width: 100%;
             }
         }
 
-        .featuresParagraph{
+        .featuresParagraph {
             font-size: 16px;
             width: 90%;
         }
     }
 
-    #counter{
+    #counter {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 50px;
         padding: 50px 20px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    #signupmodal {
+        form {
+            width: 85%;
+
+            .names {
+                input {
+                    width: 180px;
+                }
+            }
+
+            .email {
+                width: 380px;
+            }
+        }
     }
 }
 
@@ -168,76 +190,98 @@
 
     .hero {
 
-        nav{
+        nav {
             position: relative;
             padding: 30px;
             width: 100%;
 
-            .toggler{
+            .toggler {
                 display: block;
             }
         }
-            ul{
-                position: absolute;
-                background-color: #{$white-color};
-                top: 85%;
-                text-align: center;
-                width: 86%;
-                z-index: 1;
-                max-height: 0;
-                overflow: hidden;
-                flex-direction: column;
-                transition: .5s ease-in-out;
 
-                li{
-                    margin: 20px 0;
-                }
+        ul {
+            position: absolute;
+            background-color: #{$white-color};
+            top: 85%;
+            text-align: center;
+            width: 86%;
+            z-index: 1;
+            max-height: 0;
+            overflow: hidden;
+            flex-direction: column;
+            transition: .5s ease-in-out;
 
-                a{
-                    color: #{$black-color};
-                }
+            li {
+                margin: 20px 0;
             }
+
+            a {
+                color: #{$black-color};
+            }
+        }
     }
 
-    .step-timeline{
+    .step-timeline {
 
-        .step-container{
+        .step-container {
             width: 100%;
             padding: 10px 25px 10px 80px;
         }
-        &::after{
+
+        &::after {
             left: 31px;
         }
     }
 
-    .hero{
+    .hero {
 
-        &-content{
+        &-content {
 
-            img{
+            img {
                 width: 100%;
-            }    
+            }
         }
-        .container{
+
+        .container {
             padding: 0 10px;
         }
     }
 
-    #counter{
+    #counter {
         grid-template-columns: repeat(1, 1fr);
         gap: 50px;
-       
-        .numanddesc{
-    
-            div{
-    
-                span{
+
+        .numanddesc {
+
+            div {
+
+                span {
                     font-size: 18px;
                 }
-    
-                h3{
+
+                h3 {
                     font-size: 24px;
                 }
+            }
+        }
+    }
+
+    #signupmodal {
+        form {
+            padding: 3rem 1rem;
+
+            .names {
+                flex-direction: column;
+                width: 100%;
+
+                input {
+                    width: 100%;
+                }
+            }
+
+            .email {
+                width: 100%;
             }
         }
     }

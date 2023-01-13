@@ -2,6 +2,17 @@ function toggleNav(){
     document.querySelector('.hero ul').classList.toggle('showNav')
 }
 
+document.querySelector('.signupBtn').addEventListener('click', () => {
+  // document.querySelector('#signupmodal').style.visibility = "visible"
+  document.querySelector('#signupmodal').classList.add('showModal')
+
+})
+
+document.querySelector('.closeModal').addEventListener('click', () => {
+  // document.querySelector('#signupmodal').style.visibility = "hidden"
+  document.querySelector('#signupmodal').classList.remove('showModal')
+})
+
 $(".courseSlider").slick({
 
     // normal options...
