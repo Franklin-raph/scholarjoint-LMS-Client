@@ -203,9 +203,12 @@ section {
 .btn-secondary, .btn-primary {
   display: inline-block;
   border-radius: 5px;
-  padding: 8px 20px;
+  padding: 10px 20px;
   margin: 3px;
   color: #fff;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
 }
 .btn-secondary:hover, .btn-primary:hover {
   transform: scale(0.98);
@@ -804,17 +807,6 @@ footer .contacts a div {
   }
 }
 @media screen and (max-width: 600px) {
-  #signupmodal form {
-    width: 85%;
-  }
-  #signupmodal form .names input {
-    width: 180px;
-  }
-  #signupmodal form .email {
-    width: 380px;
-  }
-}
-@media screen and (max-width: 480px) {
   .hero nav {
     position: relative;
     padding: 30px;
@@ -841,6 +833,17 @@ footer .contacts a div {
   .hero ul a {
     color: #000;
   }
+  #signupmodal form {
+    width: 85%;
+  }
+  #signupmodal form .names input {
+    width: 180px;
+  }
+  #signupmodal form .email {
+    width: 380px;
+  }
+}
+@media screen and (max-width: 480px) {
   .step-timeline .step-container {
     width: 100%;
     padding: 10px 25px 10px 80px;

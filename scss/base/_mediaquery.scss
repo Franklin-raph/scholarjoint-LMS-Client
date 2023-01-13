@@ -168,26 +168,6 @@
 }
 
 @media screen and (max-width:600px) {
-    #signupmodal {
-        form {
-            width: 85%;
-
-            .names {
-                input {
-                    width: 180px;
-                }
-            }
-
-            .email {
-                width: 380px;
-            }
-        }
-    }
-}
-
-
-@media screen and (max-width: 480px) {
-
     .hero {
 
         nav {
@@ -221,6 +201,26 @@
             }
         }
     }
+
+    #signupmodal {
+        form {
+            width: 85%;
+
+            .names {
+                input {
+                    width: 180px;
+                }
+            }
+
+            .email {
+                width: 380px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 480px) {
 
     .step-timeline {
 

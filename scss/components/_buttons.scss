@@ -1,22 +1,25 @@
 // create a shared style
-%btn{
+%btn {
     display: inline-block;
     border-radius: 5px;
-    padding: 8px 20px;
+    padding: 10px 20px;
     margin: 3px;
     color: $white-color;
+    border: none;
+    font-family: $poppins-font;
+    cursor: pointer;
 
-    &:hover{
+    &:hover {
         transform: scale(.98);
     }
 }
 
-.btn-primary{
+.btn-primary {
     @extend %btn;
-    background-color: lighten($primary,  10%);
+    background-color: lighten($primary, 10%);
 }
 
-.btn-secondary{
+.btn-secondary {
     @extend %btn;
     background-color: $secondary;
 }
