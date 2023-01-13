@@ -246,6 +246,7 @@ section {
 }
 .hero ul {
   display: flex;
+  gap: 18px;
 }
 .hero li a {
   color: #fff;
@@ -558,7 +559,7 @@ section {
   grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/images/codingbanner.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/images/images.jpg");
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
