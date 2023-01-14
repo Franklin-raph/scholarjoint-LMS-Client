@@ -11,6 +11,16 @@ document.querySelector('.closeModal').addEventListener('click', () => {
   document.querySelector('#signupmodal').classList.remove('showModal')
 })
 
+async function signIn(){
+  const response = await fetch('https://onlinelearn.pythonanywhere.com/accounts/registration/',{
+    
+  })
+  const data = await response.json()
+  console.log(data)
+}
+
+signIn()
+
 $(".courseSlider").slick({
 
     // normal options...
