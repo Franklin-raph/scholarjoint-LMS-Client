@@ -15,6 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     z-index: 10;
     opacity: 0;
     visibility: hidden;
@@ -38,6 +39,24 @@
 
         .loadingGif {
             width: 20%;
+        }
+    }
+
+    .error {
+        width: 30%;
+        background-color: $white-color;
+        color: rgb(26, 26, 26);
+        padding: 10px 25px;
+        margin-bottom: 10px;
+        text-align: center;
+        display: none;
+        justify-content: space-between;
+        align-items: center;
+        // position: fixed;
+        font-size: 1rem;
+
+        i {
+            font-size: 20px;
         }
     }
 

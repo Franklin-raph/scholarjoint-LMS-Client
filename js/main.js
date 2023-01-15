@@ -1,5 +1,6 @@
 const signUpModal = document.querySelector('#signupmodal')
 const loaderContainer = document.querySelector('.loaderContainer')
+const errorMessage = document.querySelector('.error')
 
 function toggleNav(){
     document.querySelector('.hero ul').classList.toggle('showNav')
@@ -78,11 +79,13 @@ $(".courseSlider").slick({
       'password':e.target['password'].value
     }
 
-    if(userData){
+    if(!userData.email || !userData.password || !userData.last_name || !userData.first_name){
+      errorMessage.style.display = "flex"
+      return;
+    }else{
       loaderContainer.style.display = 'flex'
+      signUp(userData)
     }
-
-    signUp(userData)
   })
 
 async function signUp(userData){
@@ -93,16 +96,20 @@ async function signUp(userData){
       'Content-Type':'application/json'
     }
   })
+  const data = await response.json()
   if(response.ok){
     document.querySelector('.verifyEmailModal').style.display = 'flex'
     loaderContainer.style.display = 'none'
     form.reset()
     form.style.display = 'none'
   }else{
-    alert(response.statusText)
+    loaderContainer.style.display = 'none'
+    errorMessage.style.display = "flex"
+    errorMessage.innerHTML = `<p>${data.email}</p>
+    <i class="ri-close-circle-line closeModal"></i>
+    `
   }
   console.log(response)
-  const data = await response.json()
   console.log(data)
 }
 

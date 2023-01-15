@@ -71,7 +71,9 @@
     }
 
     #signupmodal {
-        .verifyEmailModal {
+
+        .verifyEmailModal,
+        .error {
             width: 50%;
         }
 
@@ -239,7 +241,8 @@
             }
         }
 
-        .verifyEmailModal {
+        .verifyEmailModal,
+        .error {
             width: 70%;
         }
     }
@@ -320,7 +323,8 @@
             }
         }
 
-        .verifyEmailModal {
+        .verifyEmailModal,
+        .error {
             width: 90%;
         }
 

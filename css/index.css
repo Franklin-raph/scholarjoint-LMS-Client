@@ -239,6 +239,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   z-index: 10;
   opacity: 0;
   visibility: hidden;
@@ -262,6 +263,21 @@ section {
 }
 #signupmodal .loaderContainer .loadingGif {
   width: 20%;
+}
+#signupmodal .error {
+  width: 30%;
+  background-color: #fff;
+  color: rgb(26, 26, 26);
+  padding: 10px 25px;
+  margin-bottom: 10px;
+  text-align: center;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+#signupmodal .error i {
+  font-size: 20px;
 }
 #signupmodal .verifyEmailModal {
   width: 30%;
@@ -786,7 +802,8 @@ footer .contacts a div {
   footer .links {
     gap: 7px;
   }
-  #signupmodal .verifyEmailModal {
+  #signupmodal .verifyEmailModal,
+#signupmodal .error {
     width: 50%;
   }
   #signupmodal .loaderContainer .loadingGif {
@@ -900,7 +917,8 @@ footer .contacts a div {
   #signupmodal form .email {
     width: 380px;
   }
-  #signupmodal .verifyEmailModal {
+  #signupmodal .verifyEmailModal,
+#signupmodal .error {
     width: 70%;
   }
   #signupmodal .loaderContainer .loadingGif {
@@ -944,7 +962,8 @@ footer .contacts a div {
   #signupmodal form .email {
     width: 100%;
   }
-  #signupmodal .verifyEmailModal {
+  #signupmodal .verifyEmailModal,
+#signupmodal .error {
     width: 90%;
   }
   #signupmodal .loadingGif {
