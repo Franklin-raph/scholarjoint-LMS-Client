@@ -1,13 +1,13 @@
-#features{
-    h1{
+#features {
+    h1 {
         @include headingFonts
     }
 
-    .featuresParagraph{
+    .featuresParagraph {
         @include centerParagraph;
     }
 
-    .featuresContainer{
+    .featuresContainer {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         padding: 10px 5rem;
@@ -15,23 +15,23 @@
         width: 80%;
         margin: 0 auto;
 
-        p{
+        p {
             color: #616161;
         }
 
-        .feature{
+        .feature {
             display: flex;
             align-items: flex-start;
             justify-content: center;
             gap: 10px;
             width: 100%;
-    
-            h3{
+
+            h3 {
                 font-size: 20px;
-                color: #{$primary};
+                color: #00274e;
             }
-    
-            i{
+
+            i {
                 font-size: 1.8rem;
                 color: #{$primary};
                 padding: 8px;

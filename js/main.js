@@ -1,25 +1,18 @@
+const signUpModal = document.querySelector('#signupmodal')
+const loaderContainer = document.querySelector('.loaderContainer')
+
 function toggleNav(){
     document.querySelector('.hero ul').classList.toggle('showNav')
 }
 
 document.querySelector('.signupBtn').addEventListener('click', () => {
-  document.querySelector('#signupmodal').classList.add('showModal')
+  signUpModal.classList.add('showModal')
 
 })
 
 document.querySelector('.closeModal').addEventListener('click', () => {
-  document.querySelector('#signupmodal').classList.remove('showModal')
+  signUpModal.classList.remove('showModal')
 })
-
-async function signIn(){
-  const response = await fetch('https://onlinelearn.pythonanywhere.com/accounts/registration/',{
-    
-  })
-  const data = await response.json()
-  console.log(data)
-}
-
-signIn()
 
 $(".courseSlider").slick({
 
@@ -74,3 +67,49 @@ $(".courseSlider").slick({
     delay:10,
     time: 5000
   });
+
+  const form = document.querySelector('form')
+  form.addEventListener('submit', (e)=> {
+    e.preventDefault()
+    const userData = {
+      'first_name':e.target['firstName'].value,
+      'last_name':e.target['lastName'].value,
+      'email':e.target['email'].value,
+      'password':e.target['password'].value
+    }
+
+    if(userData){
+      loaderContainer.style.display = 'flex'
+    }
+
+    signUp(userData)
+  })
+
+async function signUp(userData){
+  const response = await fetch('https://onlinelearn.pythonanywhere.com/accounts/registration/',{
+    method: "POST",
+    body: JSON.stringify(userData),
+    headers: {
+      'Content-Type':'application/json'
+    }
+  })
+  if(response.ok){
+    document.querySelector('.verifyEmailModal').style.display = 'flex'
+    loaderContainer.style.display = 'none'
+    form.reset()
+    form.style.display = 'none'
+  }else{
+    alert(response.statusText)
+  }
+  console.log(response)
+  const data = await response.json()
+  console.log(data)
+}
+
+signUpModal.addEventListener('click', (e)=>{
+  if(e.target.classList.contains('closeEmailVerificationModal')){
+    signUpModal.classList.remove('showModal')
+    document.querySelector('.verifyEmailModal').style.display = "none"
+    form.style.display = "flex"
+  }
+})

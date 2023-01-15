@@ -215,7 +215,7 @@ section {
 }
 
 .btn-primary {
-  background-color: #11337d;
+  background-color: #429af1;
 }
 
 .btn-secondary {
@@ -244,6 +244,49 @@ section {
   visibility: hidden;
   pointer-events: none;
   transition: all 0.3s;
+}
+#signupmodal .loaderContainer {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  padding-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+#signupmodal .loaderContainer .loadingGif {
+  width: 20%;
+}
+#signupmodal .verifyEmailModal {
+  width: 30%;
+  background-color: #fff;
+  color: rgb(26, 26, 26);
+  padding: 25px;
+  text-align: center;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  gap: 20px;
+}
+#signupmodal .verifyEmailModal i {
+  font-size: 32px;
+  color: #1ac888;
+}
+#signupmodal .verifyEmailModal button {
+  all: unset;
+  background-color: #d32752;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
 }
 #signupmodal form {
   background-color: #fff;
@@ -296,9 +339,12 @@ section {
   background-color: #1ac888;
   cursor: pointer;
 }
+#signupmodal form .pass {
+  margin-top: 20px;
+}
 
 .hero {
-  background-color: #0b2150;
+  background-color: #1380ED;
   color: #fff;
   -webkit-clip-path: polygon(100% 0, 100% 86%, 50% 100%, 0 86%, 0 0);
           clip-path: polygon(100% 0, 100% 86%, 50% 100%, 0 86%, 0 0);
@@ -411,7 +457,7 @@ section {
 }
 #timeSection h1 {
   text-align: center;
-  color: #0b2150;
+  color: #1380ED;
   font-size: 2em;
   text-transform: uppercase;
 }
@@ -455,8 +501,8 @@ section {
 .step-timeline .step-container .number {
   color: #000;
   position: absolute;
-  border-radius: 50%;
-  border: 2px solid #0b2150;
+  border-radius: 10px;
+  border: 2px solid #1380ED;
   height: 40px;
   width: 40px;
   top: 30px;
@@ -468,12 +514,15 @@ section {
   background-color: #fff;
   font-size: 20px;
 }
+.step-timeline .step-container .number i {
+  color: #1380ED;
+}
 .step-timeline::after {
   content: "";
   position: absolute;
   width: 5px;
   height: 100%;
-  background-color: #0b2150;
+  background-color: #80B1FF;
   top: 0;
   left: 50%;
   margin-left: -3px;
@@ -483,7 +532,7 @@ section {
 }
 .step-timeline .text-box {
   padding: 20px 30px;
-  background-color: #0b2150;
+  background-color: #1380ED;
   position: relative;
   border-radius: 7px;
   color: #fff;
@@ -505,7 +554,7 @@ section {
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-right: 15px solid #0b2150;
+  border-right: 15px solid #1380ED;
   left: -15px;
 }
 .step-timeline .left-container-arrow {
@@ -516,13 +565,13 @@ section {
   z-index: 1;
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
-  border-left: 15px solid #0b2150;
+  border-left: 15px solid #1380ED;
   right: -15px;
 }
 
 #features h1 {
   text-align: center;
-  color: #0b2150;
+  color: #1380ED;
   font-size: 2em;
   text-transform: uppercase;
 }
@@ -552,11 +601,11 @@ section {
 }
 #features .featuresContainer .feature h3 {
   font-size: 20px;
-  color: #0b2150;
+  color: #00274e;
 }
 #features .featuresContainer .feature i {
   font-size: 1.8rem;
-  color: #0b2150;
+  color: #1380ED;
   padding: 8px;
   border-radius: 5px;
   color: #ffffff;
@@ -565,7 +614,7 @@ section {
 
 #courses h1 {
   text-align: center;
-  color: #0b2150;
+  color: #1380ED;
   font-size: 2em;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -668,7 +717,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0b2150;
+  background-color: #1380ED;
   color: #fff;
   padding: 50px 50px 30px;
 }
@@ -736,6 +785,12 @@ footer .contacts a div {
   }
   footer .links {
     gap: 7px;
+  }
+  #signupmodal .verifyEmailModal {
+    width: 50%;
+  }
+  #signupmodal .loaderContainer .loadingGif {
+    width: 40%;
   }
 }
 @media screen and (max-width: 700px) {
@@ -805,6 +860,9 @@ footer .contacts a div {
     row-gap: 50px;
     padding: 50px 20px;
   }
+  #signupmodal .loaderContainer .loadingGif {
+    width: 70%;
+  }
 }
 @media screen and (max-width: 600px) {
   .hero nav {
@@ -842,6 +900,12 @@ footer .contacts a div {
   #signupmodal form .email {
     width: 380px;
   }
+  #signupmodal .verifyEmailModal {
+    width: 70%;
+  }
+  #signupmodal .loaderContainer .loadingGif {
+    width: 80%;
+  }
 }
 @media screen and (max-width: 480px) {
   .step-timeline .step-container {
@@ -878,6 +942,12 @@ footer .contacts a div {
     width: 100%;
   }
   #signupmodal form .email {
+    width: 100%;
+  }
+  #signupmodal .verifyEmailModal {
+    width: 90%;
+  }
+  #signupmodal .loadingGif {
     width: 100%;
   }
 }/*# sourceMappingURL=index.css.map */

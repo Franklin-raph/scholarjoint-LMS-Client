@@ -65,7 +65,7 @@
         .number {
             color: #{$black-color};
             position: absolute;
-            border-radius: 50%;
+            border-radius: 10px;
             border: 2px solid #{$primary};
             height: 40px;
             width: 40px;
@@ -77,6 +77,10 @@
             justify-content: center;
             background-color: #{$white-color};
             font-size: 20px;
+
+            i {
+                color: $primary;
+            }
         }
     }
 
@@ -85,7 +89,7 @@
         position: absolute;
         width: 5px;
         height: 100%;
-        background-color: #{$primary};
+        background-color: #{$lightBlue};
         top: 0;
         left: 50%;
         margin-left: -3px;

@@ -69,6 +69,19 @@
             gap: 7px;
         }
     }
+
+    #signupmodal {
+        .verifyEmailModal {
+            width: 50%;
+        }
+
+        .loaderContainer {
+
+            .loadingGif {
+                width: 40%;
+            }
+        }
+    }
 }
 
 
@@ -165,6 +178,15 @@
         row-gap: 50px;
         padding: 50px 20px;
     }
+
+    #signupmodal {
+        .loaderContainer {
+
+            .loadingGif {
+                width: 70%;
+            }
+        }
+    }
 }
 
 @media screen and (max-width:600px) {
@@ -214,6 +236,19 @@
 
             .email {
                 width: 380px;
+            }
+        }
+
+        .verifyEmailModal {
+            width: 70%;
+        }
+    }
+
+    #signupmodal {
+        .loaderContainer {
+
+            .loadingGif {
+                width: 80%;
             }
         }
     }
@@ -283,6 +318,14 @@
             .email {
                 width: 100%;
             }
+        }
+
+        .verifyEmailModal {
+            width: 90%;
+        }
+
+        .loadingGif {
+            width: 100%;
         }
     }
 }

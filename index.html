@@ -93,7 +93,9 @@
         <p class="timeSectionParagraph">To get started with our Learning Management System, all you need is to follow the steps listed below</p>
         <div class="step-timeline">
             <div class="step-container left-container">
-                <div class="number">1</div>
+                <div class="number">
+                    <i class="ri-check-double-fill"></i>
+                </div>
                 <div class="text-box">
                     <h3>STEP 1</h3>
                     <h4 class="my-1">
@@ -107,7 +109,9 @@
             </div>
 
             <div class="step-container right-container">
-                <div class="number">2</div>
+                <div class="number">
+                    <i class="ri-mail-check-line"></i>
+                </div>
                 <div class="text-box">
                     <h3>STEP 2</h3>
                     <h4 class="my-1">
@@ -121,7 +125,9 @@
             </div>
 
             <div class="step-container left-container">
-                <div class="number">3</div>
+                <div class="number">
+                    <i class="ri-profile-line"></i>
+                </div>
                 <div class="text-box">
                     <h3>STEP 3</h3>
                     <h4 class="my-1">
@@ -135,7 +141,9 @@
             </div>
 
             <div class="step-container right-container">
-                <div class="number">4</div>
+                <div class="number">
+                    <i class="ri-draft-line"></i>
+                </div>
                 <div class="text-box">
                     <h3>STEP 4</h3>
                     <h4 class="my-1">
@@ -368,10 +376,10 @@
         </div>
         <div class="numanddesc">
             <div>
-                <h3 class="counter">200</h3>
+                <h3 class="counter">1000</h3>
                 <span>+</span>
             </div>
-            <h2>Students</h2>
+            <h2>Community Members</h2>
         </div>
     </section>
 
@@ -405,16 +413,26 @@
     </footer>
 
     <div id="signupmodal">
+        <div class="loaderContainer">
+            <img src="/images/loading2.gif" alt="" class="loadingGif">
+        </div>
         <form>
             <i class="ri-close-circle-line closeModal"></i>
             <div class="names">
-                <input type="text" id="" placeholder="First Name">
-                <input type="text" id="" placeholder="Last Name">
+                <input type="text" name="firstName" placeholder="First Name" required>
+                <input type="text" name="lastName" placeholder="Last Name" required>
             </div>
-            <input type="text" class="email" placeholder="Email@email.com">
+            <input type="text" class="email" name="email" placeholder="Email" required>
+            <input type="password" class="email pass" name="password" placeholder="Password" required>
             <input type="submit" value="Sign Up" class="signup">
         </form>
+        <div class="verifyEmailModal">
+            <i class="ri-mail-check-line"></i>
+            <p>A verification mail has been sent to you at sososo&so.com</p>
+            <button class="closeEmailVerificationModal">Close</button>
+        </div>
     </div>
+
 
 
     <script src="/js/jquery.js"></script>
