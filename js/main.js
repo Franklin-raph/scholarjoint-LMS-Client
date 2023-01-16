@@ -18,11 +18,14 @@ function toggleNav(){
 
 document.querySelector('.signupBtn').addEventListener('click', () => {
   signUpModal.classList.add('showModal')
-
+  document.querySelector('.singInForm').style.display = "none"
+  document.querySelector('.singUpForm').style.display = "flex"
 })
 
-document.querySelector('.closeModal').addEventListener('click', () => {
-  signUpModal.classList.remove('showModal')
+document.querySelectorAll('.closeModal').forEach(closemodalIcon => {
+  closemodalIcon.addEventListener('click', ()=> {
+    signUpModal.classList.remove('showModal')
+  })
 })
 
 document.querySelector('.closeErrorModal').addEventListener('click', ()=>{
