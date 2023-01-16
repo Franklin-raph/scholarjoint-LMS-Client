@@ -11,6 +11,14 @@
         margin-bottom: 3rem;
         padding: 30px 0;
 
+        button {
+            all: unset;
+            font-family: $poppins-font;
+            padding: 3px 12px;
+            border: 2px solid $secondary;
+            border-radius: 5px;
+        }
+
         .toggler {
             display: none;
         }
@@ -26,6 +34,7 @@
 
     ul {
         display: flex;
+        align-items: center;
         gap: 18px;
     }
 

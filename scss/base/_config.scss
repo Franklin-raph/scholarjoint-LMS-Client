@@ -70,7 +70,7 @@ section {
 
 
 @mixin set-background($color) {
-    background: linear-gradient(to left, #09C6F9, #045DE9);
+    background: linear-gradient(#045DE9, #09C6F9);
     color: set-text-color(($color));
 }
 

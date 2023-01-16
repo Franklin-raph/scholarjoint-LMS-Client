@@ -369,7 +369,7 @@ section {
 }
 
 .hero {
-  background: linear-gradient(to left, #09C6F9, #045DE9);
+  background: linear-gradient(#045DE9, #09C6F9);
   color: #fff;
   -webkit-clip-path: polygon(100% 0, 100% 86%, 50% 100%, 0 86%, 0 0);
           clip-path: polygon(100% 0, 100% 86%, 50% 100%, 0 86%, 0 0);
@@ -383,6 +383,13 @@ section {
   margin-bottom: 3rem;
   padding: 30px 0;
 }
+.hero nav button {
+  all: unset;
+  font-family: "Poppins", sans-serif;
+  padding: 3px 12px;
+  border: 2px solid #1ac888;
+  border-radius: 5px;
+}
 .hero nav .toggler {
   display: none;
 }
@@ -395,6 +402,7 @@ section {
 }
 .hero ul {
   display: flex;
+  align-items: center;
   gap: 18px;
 }
 .hero li a {
@@ -896,8 +904,12 @@ footer .contacts a div {
     padding: 30px;
     width: 100%;
   }
+  .hero nav button {
+    color: #1ac888;
+  }
   .hero nav .toggler {
     display: block;
+    cursor: pointer;
   }
   .hero ul {
     position: absolute;

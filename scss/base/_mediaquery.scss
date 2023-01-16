@@ -199,8 +199,13 @@
             padding: 30px;
             width: 100%;
 
+            button {
+                color: $secondary;
+            }
+
             .toggler {
                 display: block;
+                cursor: pointer;
             }
         }
 

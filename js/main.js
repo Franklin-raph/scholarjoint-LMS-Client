@@ -12,6 +12,12 @@ document.querySelector('.signUpText span').addEventListener('click', ()=>{
   document.querySelector('.singInForm').style.display = "none"
 })
 
+document.querySelector('.navLinks button').addEventListener('click', ()=>{
+  signUpModal.classList.add('showModal')
+  document.querySelector('.singInForm').style.display = "flex"
+  document.querySelector('.singUpForm').style.display = "none"  
+})
+
 function toggleNav(){
     document.querySelector('.hero ul').classList.toggle('showNav')
 }
