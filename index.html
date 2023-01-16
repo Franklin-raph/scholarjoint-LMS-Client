@@ -420,7 +420,7 @@
             <p>Please Validate all fields</p>
             <i class="ri-close-circle-line closeErrorModal"></i>
         </div>
-        <form>
+        <form class="singUpForm">
             <i class="ri-close-circle-line closeModal"></i>
             <div class="names">
                 <input type="text" name="firstName" placeholder="First Name" >
@@ -429,7 +429,21 @@
             <input type="text" class="email" name="email" placeholder="Email" >
             <input type="password" class="email pass" name="password" placeholder="Password" >
             <input type="submit" value="Sign Up" class="signup">
+            <p class="mt-1 signInText">Already have an accout? <span>Sign in</span></p>
         </form>
+
+        <form class="singInForm">
+            <i class="ri-close-circle-line closeModal"></i>
+            <!-- <div class="names">
+                <input type="text" name="firstName" placeholder="First Name" >
+                <input type="text" name="lastName" placeholder="Last Name" >
+            </div> -->
+            <input type="text" class="email" name="email" placeholder="Email" >
+            <input type="password" class="email pass" name="password" placeholder="Password" >
+            <input type="submit" value="Sign In" class="signup">
+            <p class="mt-1 signUpText">Don't have an accout? <span>Sign up</span></p>
+        </form>
+
         <div class="verifyEmailModal">
             <i class="ri-mail-check-line"></i>
             <p>A verification mail has been sent to you at sososo&so.com</p>

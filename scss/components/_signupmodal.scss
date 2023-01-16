@@ -97,6 +97,13 @@
         padding: 3rem;
         position: relative;
 
+        .signInText span,
+        .signUpText span {
+            font-weight: bold;
+            color: $secondary;
+            cursor: pointer;
+        }
+
         i {
             position: absolute;
             top: 3%;
@@ -148,5 +155,9 @@
         .pass {
             margin-top: 20px;
         }
+    }
+
+    .singInForm {
+        display: none;
     }
 }

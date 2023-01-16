@@ -313,6 +313,12 @@ section {
   padding: 3rem;
   position: relative;
 }
+#signupmodal form .signInText span,
+#signupmodal form .signUpText span {
+  font-weight: bold;
+  color: #1ac888;
+  cursor: pointer;
+}
 #signupmodal form i {
   position: absolute;
   top: 3%;
@@ -357,6 +363,9 @@ section {
 }
 #signupmodal form .pass {
   margin-top: 20px;
+}
+#signupmodal .singInForm {
+  display: none;
 }
 
 .hero {

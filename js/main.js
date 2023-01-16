@@ -2,6 +2,16 @@ const signUpModal = document.querySelector('#signupmodal')
 const loaderContainer = document.querySelector('.loaderContainer')
 const errorMessage = document.querySelector('.error')
 
+document.querySelector('.signInText span').addEventListener('click', ()=>{
+  document.querySelector('.singUpForm').style.display = "none"
+  document.querySelector('.singInForm').style.display = "flex"
+})
+
+document.querySelector('.signUpText span').addEventListener('click', ()=>{
+  document.querySelector('.singUpForm').style.display = "flex"
+  document.querySelector('.singInForm').style.display = "none"
+})
+
 function toggleNav(){
     document.querySelector('.hero ul').classList.toggle('showNav')
 }
