@@ -360,7 +360,7 @@ section {
 }
 
 .hero {
-  background-color: #1380ED;
+  background: linear-gradient(to left, #09C6F9, #045DE9);
   color: #fff;
   -webkit-clip-path: polygon(100% 0, 100% 86%, 50% 100%, 0 86%, 0 0);
           clip-path: polygon(100% 0, 100% 86%, 50% 100%, 0 86%, 0 0);
@@ -850,7 +850,7 @@ footer .contacts a div {
   }
   .step-timeline .left-container-arrow,
 .step-timeline .right-container-arrow {
-    border-right: 15px solid #0B2150;
+    border-right: 15px solid #1380ED;
     border-left: 0;
     left: -15px;
   }
@@ -903,7 +903,13 @@ footer .contacts a div {
     transition: 0.5s ease-in-out;
   }
   .hero ul li {
-    margin: 20px 0;
+    margin: 5px 0;
+  }
+  .hero ul li:first-child {
+    padding-top: 16px;
+  }
+  .hero ul li:last-child {
+    padding-bottom: 16px;
   }
   .hero ul a {
     color: #000;

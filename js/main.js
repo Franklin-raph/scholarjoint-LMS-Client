@@ -15,6 +15,10 @@ document.querySelector('.closeModal').addEventListener('click', () => {
   signUpModal.classList.remove('showModal')
 })
 
+document.querySelector('.closeErrorModal').addEventListener('click', ()=>{
+  errorMessage.style.display = 'none'
+})
+
 $(".courseSlider").slick({
 
     // normal options...
@@ -106,12 +110,18 @@ async function signUp(userData){
     loaderContainer.style.display = 'none'
     errorMessage.style.display = "flex"
     errorMessage.innerHTML = `<p>${data.email}</p>
-    <i class="ri-close-circle-line closeModal"></i>
+    <i class="ri-close-circle-line"></i>
     `
   }
   console.log(response)
   console.log(data)
 }
+
+errorMessage.addEventListener('click', (e)=>{
+  if(e.target.classList.contains('ri-close-circle-line')){
+    e.target.parentElement.style.display = 'none'
+  }
+})
 
 signUpModal.addEventListener('click', (e)=>{
   if(e.target.classList.contains('closeEmailVerificationModal')){

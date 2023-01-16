@@ -136,7 +136,7 @@
 
         .left-container-arrow,
         .right-container-arrow {
-            border-right: 15px solid #0B2150;
+            border-right: 15px solid $primary;
             border-left: 0;
             left: -15px;
         }
@@ -217,7 +217,15 @@
             transition: .5s ease-in-out;
 
             li {
-                margin: 20px 0;
+                margin: 5px 0;
+            }
+
+            li:first-child {
+                padding-top: 16px;
+            }
+
+            li:last-child {
+                padding-bottom: 16px;
             }
 
             a {
