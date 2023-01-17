@@ -66,7 +66,6 @@
             color: #{$black-color};
             position: absolute;
             border-radius: 10px;
-            border: 2px solid #{$primary};
             height: 40px;
             width: 40px;
             top: 30px;
@@ -75,11 +74,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #{$white-color};
+            background-color: $primary;
             font-size: 20px;
 
             i {
-                color: $primary;
+                color: $white-color;
             }
         }
     }

@@ -369,7 +369,7 @@ section {
 }
 
 .hero {
-  background: linear-gradient(#045DE9, #09C6F9);
+  background: linear-gradient(#003791, #045DE9);
   color: #fff;
   -webkit-clip-path: polygon(100% 0, 100% 86%, 50% 100%, 0 86%, 0 0);
           clip-path: polygon(100% 0, 100% 86%, 50% 100%, 0 86%, 0 0);
@@ -535,7 +535,6 @@ section {
   color: #000;
   position: absolute;
   border-radius: 10px;
-  border: 2px solid #1380ED;
   height: 40px;
   width: 40px;
   top: 30px;
@@ -544,11 +543,11 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff;
+  background-color: #1380ED;
   font-size: 20px;
 }
 .step-timeline .step-container .number i {
-  color: #1380ED;
+  color: #fff;
 }
 .step-timeline::after {
   content: "";

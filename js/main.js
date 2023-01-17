@@ -1,6 +1,11 @@
 const signUpModal = document.querySelector('#signupmodal')
 const loaderContainer = document.querySelector('.loaderContainer')
 const errorMessage = document.querySelector('.error')
+const navLinks = document.querySelector('.hero ul')
+
+function toggleNav(){
+  navLinks.classList.toggle('showNav')
+}
 
 document.querySelector('.signInText span').addEventListener('click', ()=>{
   document.querySelector('.singUpForm').style.display = "none"
@@ -17,10 +22,6 @@ document.querySelector('.navLinks button').addEventListener('click', ()=>{
   document.querySelector('.singInForm').style.display = "flex"
   document.querySelector('.singUpForm').style.display = "none"  
 })
-
-function toggleNav(){
-    document.querySelector('.hero ul').classList.toggle('showNav')
-}
 
 document.querySelector('.signupBtn').addEventListener('click', () => {
   signUpModal.classList.add('showModal')
@@ -93,7 +94,7 @@ $(".courseSlider").slick({
   });
 
   const form = document.querySelector('form')
-  form.addEventListener('submit', (e)=> {
+  form.addEventListener('submit', function(e) {
     e.preventDefault()
     const userData = {
       'first_name':e.target['firstName'].value,
