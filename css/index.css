@@ -499,6 +499,7 @@ section {
   width: 50%;
   margin: 0 auto 4rem;
   text-align: center;
+  color: #616161;
 }
 
 .step-timeline {
@@ -612,6 +613,8 @@ section {
   width: 50%;
   margin: 0 auto 4rem;
   text-align: center;
+  color: #616161;
+  color: #616161;
 }
 #features .featuresContainer {
   display: grid;
@@ -659,6 +662,7 @@ section {
   width: 50%;
   margin: 0 auto 4rem;
   text-align: center;
+  color: #616161;
 }
 #courses .courseCards {
   display: flex;
@@ -884,6 +888,12 @@ footer .contacts a div {
   #features .featuresContainer .feature {
     width: 100%;
   }
+  #features .featuresContainer .feature h3 {
+    font-size: 18px;
+  }
+  #features .featuresContainer .feature p {
+    font-size: 15px;
+  }
   #features .featuresParagraph {
     font-size: 16px;
     width: 90%;
@@ -999,6 +1009,12 @@ footer .contacts a div {
 @media screen and (max-width: 375px) {
   #features .featuresContainer {
     width: 98%;
+  }
+  #features .featuresContainer .feature h3 {
+    font-size: 16px;
+  }
+  #features .featuresContainer .feature i {
+    padding: 5px;
   }
   #features p {
     font-size: 14px;
