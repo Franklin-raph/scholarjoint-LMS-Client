@@ -346,3 +346,16 @@
         }
     }
 }
+
+@media screen and (max-width: 375px) {
+    #features {
+        .featuresContainer {
+            width: 98%;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 25px;
+        }
+    }
+}

@@ -7,25 +7,8 @@ function toggleNav(){
   navLinks.classList.toggle('showNav')
 }
 
-document.querySelector('.signInText span').addEventListener('click', ()=>{
-  document.querySelector('.singUpForm').style.display = "none"
-  document.querySelector('.singInForm').style.display = "flex"
-})
-
-document.querySelector('.signUpText span').addEventListener('click', ()=>{
-  document.querySelector('.singUpForm').style.display = "flex"
-  document.querySelector('.singInForm').style.display = "none"
-})
-
-document.querySelector('.navLinks button').addEventListener('click', ()=>{
-  signUpModal.classList.add('showModal')
-  document.querySelector('.singInForm').style.display = "flex"
-  document.querySelector('.singUpForm').style.display = "none"  
-})
-
 document.querySelector('.signupBtn').addEventListener('click', () => {
   signUpModal.classList.add('showModal')
-  document.querySelector('.singInForm').style.display = "none"
   document.querySelector('.singUpForm').style.display = "flex"
 })
 
@@ -93,7 +76,8 @@ $(".courseSlider").slick({
     time: 5000
   });
 
-  const form = document.querySelector('form')
+  const form = document.querySelector('.singUpForm')
+  console.log(form)
   form.addEventListener('submit', function(e) {
     e.preventDefault()
     const userData = {
@@ -150,3 +134,26 @@ signUpModal.addEventListener('click', (e)=>{
     form.style.display = "flex"
   }
 })
+
+// const login = document.querySelector('.singInForm')
+// login.addEventListener('submit', (e)=>{
+//   e.preventDefault()
+//   const userLoginData = {
+//     'email':e.target['email'].value,
+//     'password':e.target['password'].value
+//   }
+
+//   if(!userLoginData.email || !userLoginData.password){
+//     errorMessage.style.display = "flex"
+//     return;
+//   }else{
+//     loaderContainer.style.display = 'flex'
+//     location.href = "http://127.0.0.1:5173/dashboard"
+//   }
+// })
+
+// function logIn(e){
+//   e.preventDefault()
+//   console.log("first")
+//   location.replace = "http://127.0.0.1:5173/dashboard"
+// }

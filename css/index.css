@@ -995,4 +995,13 @@ footer .contacts a div {
   #signupmodal .loadingGif {
     width: 100%;
   }
+}
+@media screen and (max-width: 375px) {
+  #features .featuresContainer {
+    width: 98%;
+  }
+  #features p {
+    font-size: 14px;
+    line-height: 25px;
+  }
 }/*# sourceMappingURL=index.css.map */
