@@ -96,6 +96,16 @@ $(".courseSlider").slick({
     }
   })
 
+  async function getCourse(){
+    const response = await fetch('https://onlinelearn.pythonanywhere.com/all-courses',{
+      method: "GET"
+    })
+    const data = await response.json()
+    console.log(data)
+  }
+
+  getCourse()
+
 async function signUp(userData){
   const response = await fetch('https://onlinelearn.pythonanywhere.com/accounts/registration/',{
     method: "POST",
