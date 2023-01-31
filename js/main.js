@@ -3,6 +3,17 @@ const loaderContainer = document.querySelector(".loaderContainer");
 const errorMessage = document.querySelector(".error");
 const navLinks = document.querySelector(".hero ul");
 
+async function getAllCourses() {
+  const response = await fetch("https://onlinelearn.pythonanywhere.com/all-courses/", {
+    method: "GET",
+  });
+  const data = await response.json();
+  // localStorage.setItem("tracks", JSON.stringify(data));
+  console.log(data);
+}
+
+getAllCourses();
+
 function toggleNav() {
   navLinks.classList.toggle("showNav");
 }
@@ -74,8 +85,8 @@ $(".counter").counterUp({
   time: 5000,
 });
 
-async function getCourse() {
-  const response = await fetch("https://onlinelearn.pythonanywhere.com/List-all-tracks", {
+async function getTracks() {
+  const response = await fetch("https://onlinelearn.pythonanywhere.com/List-all-tracks/", {
     method: "GET",
   });
   const data = await response.json();
@@ -83,7 +94,7 @@ async function getCourse() {
   console.log(data);
 }
 
-document.addEventListener("DOMContentLoaded", getCourse());
+document.addEventListener("DOMContentLoaded", getTracks());
 
 // Populating the select field with the array of data in local storage
 const tracks = JSON.parse(localStorage.getItem("tracks")) || [];
@@ -133,7 +144,7 @@ form.addEventListener("submit", function (e) {
 
 async function signUp(userData) {
   // console.log(userData);
-  const response = await fetch("https://onlinelearn.pythonanywhere.com/accounts/registration", {
+  const response = await fetch("https://onlinelearn.pythonanywhere.com/accounts/registration/", {
     method: "POST",
     body: JSON.stringify(userData),
     headers: {
