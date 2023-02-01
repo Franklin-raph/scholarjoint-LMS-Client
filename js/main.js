@@ -3,6 +3,8 @@ const loaderContainer = document.querySelector(".loaderContainer");
 const errorMessage = document.querySelector(".error");
 const navLinks = document.querySelector(".hero ul");
 
+document.addEventListener("DOMContentLoaded", getTracks(), getAllCourses());
+
 async function getAllCourses() {
   const response = await fetch("https://onlinelearn.pythonanywhere.com/all-courses/", {
     method: "GET",
@@ -10,9 +12,50 @@ async function getAllCourses() {
   const data = await response.json();
   // localStorage.setItem("tracks", JSON.stringify(data));
   console.log(data);
+  data.forEach((course) => {
+    const courses = document.createElement("div");
+    courses.classList.add("course");
+    courses.innerHTML += `
+          <img src=${course.course_img} alt="" />
+          <div class="courseInfo">
+            <p>${course.title}</p>
+            <div class="courseFormat">
+              <ul>
+                <li>
+                  <i class="ri-checkbox-circle-line"></i>
+                  <span>${course.mode}</span>
+                </li>
+                <li>
+                  <i class="ri-checkbox-circle-line"></i>
+                  <span>${course.duration}</span>
+                </li>
+                <li>
+                  <i class="ri-checkbox-circle-line"></i>
+                  <span>${course.lessonDuration}</span>
+                </li>
+              </ul>
+              <p class="level">${course.level}</p>
+            </div>
+            <div class="courseFooter">
+              <div>
+                <button class="viewCourse" onclick="getCourseDetails(${course.courseId})">view course</button>
+              </div>
+              <p class="price">${course.price}</p>
+            </div>
+          </div>
+  `;
+    document.querySelector(".courseCards").appendChild(courses);
+  });
 }
 
-getAllCourses();
+async function getTracks() {
+  const response = await fetch("https://onlinelearn.pythonanywhere.com/List-all-tracks/", {
+    method: "GET",
+  });
+  const data = await response.json();
+  localStorage.setItem("tracks", JSON.stringify(data));
+  console.log(data);
+}
 
 function toggleNav() {
   navLinks.classList.toggle("showNav");
@@ -84,17 +127,6 @@ $(".counter").counterUp({
   delay: 10,
   time: 5000,
 });
-
-async function getTracks() {
-  const response = await fetch("https://onlinelearn.pythonanywhere.com/List-all-tracks/", {
-    method: "GET",
-  });
-  const data = await response.json();
-  localStorage.setItem("tracks", JSON.stringify(data));
-  console.log(data);
-}
-
-document.addEventListener("DOMContentLoaded", getTracks());
 
 // Populating the select field with the array of data in local storage
 const tracks = JSON.parse(localStorage.getItem("tracks")) || [];
