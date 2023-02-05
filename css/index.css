@@ -665,10 +665,11 @@ section {
   color: #616161;
 }
 #courses .courseCards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  /* gap: 20px; */
 }
 #courses .courseCards p, #courses .courseCards li {
   color: #616161;
@@ -829,6 +830,11 @@ footer .contacts a div {
   #signupmodal .loaderContainer .loadingGif {
     width: 40%;
   }
+
+  #courses .courseCards {
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 20px; */
+  }
 }
 @media screen and (max-width: 700px) {
   .hero {
@@ -960,6 +966,11 @@ footer .contacts a div {
   #signupmodal .loaderContainer .loadingGif {
     width: 80%;
   }
+
+  #courses .courseCards {
+    grid-template-columns: repeat(2, 1fr);
+    /* gap: 20px; */
+  }
 }
 @media screen and (max-width: 480px) {
   .step-timeline .step-container {
@@ -1019,5 +1030,10 @@ footer .contacts a div {
   #features p {
     font-size: 14px;
     line-height: 25px;
+  }
+
+  #courses .courseCards {
+    grid-template-columns: repeat(1, 1fr);
+    /* gap: 20px; */
   }
 }/*# sourceMappingURL=index.css.map */

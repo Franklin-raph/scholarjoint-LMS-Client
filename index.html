@@ -9,6 +9,47 @@
     <link rel="stylesheet" href="/css/slick.css" />
     <link rel="stylesheet" href="/css/slick-theme.css" />
     <link rel="stylesheet" href="/css/index.css" />
+
+    <style>
+      #courseModal {
+        background-color: rgba(0, 0, 0, 0.8);
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000;
+        display: none;
+        justify-content: center;
+        align-items: center;
+      }
+      #courseModal .courseInfomation {
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 2rem 3rem;
+        position: relative;
+        width: 30%;
+      }
+      #courseModal .courseInfomation .closeModal {
+        position: absolute;
+        top: 3%;
+        right: 2%;
+        font-size: 22px;
+        cursor: pointer;
+      }
+      #courseModal .courseInfomation .closeModal:hover {
+        color: #d32752;
+      }
+      .showModal {
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+      }
+    </style>
   </head>
   <body>
     <header class="hero">
@@ -161,7 +202,7 @@
         <h1>Courses</h1>
         <p>We offer a variety of curses like Html, CSS, JavaScript, React, Python, Django, Node, Express, e.t.c</p>
       </div>
-      <div class="courseCards courseSlider">
+      <div class="courseCards">
         <!-- <div class="course">
           <img src="/images/images.jfif" alt="" />
           <div class="courseInfo">
@@ -440,6 +481,37 @@
         <p>A verification mail has been sent to you at sososo&so.com</p>
         <button class="closeEmailVerificationModal">Close</button>
       </div>
+    </div>
+
+    <div id="courseModal">
+      <!-- <div class="courseInfomation">
+        <i class="ri-close-circle-line closeModal"></i>
+        <h3>${data.title}</h3>
+        <p>${data.description}</p>
+        <div class="courseFormat">
+          <ul>
+            <li>
+              <i class="ri-checkbox-circle-line"></i>
+              <span>${data.duration}</span>
+            </li>
+            <li>
+              <i class="ri-checkbox-circle-line"></i>
+              <span>${data.lessonDuration}</span>
+            </li>
+            <li>
+              <i class="ri-checkbox-circle-line"></i>
+              <span>${data.mode}</span>
+            </li>
+          </ul>
+          <p class="level">${data.level}</p>
+        </div>
+        <button>
+          <a href="https://paystack.com/pay/yxrq24ctfo">
+            <i class="ri-checkbox-circle-line"></i>
+            <p>${data.price}</p>
+          </a>
+        </button>
+      </div> -->
     </div>
 
     <script src="/js/jquery.js"></script>

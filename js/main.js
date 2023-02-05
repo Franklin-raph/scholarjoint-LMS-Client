@@ -2,6 +2,8 @@ const signUpModal = document.querySelector("#signupmodal");
 const loaderContainer = document.querySelector(".loaderContainer");
 const errorMessage = document.querySelector(".error");
 const navLinks = document.querySelector(".hero ul");
+const courseModal = document.querySelector("#courseModal");
+console.log(courseModal);
 
 document.addEventListener("DOMContentLoaded", getTracks(), getAllCourses());
 
@@ -10,13 +12,13 @@ async function getAllCourses() {
     method: "GET",
   });
   const data = await response.json();
-  // localStorage.setItem("tracks", JSON.stringify(data));
   console.log(data);
   data.forEach((course) => {
     const courses = document.createElement("div");
     courses.classList.add("course");
+    // <img src=${course.course_img} alt="" />
     courses.innerHTML += `
-          <img src=${course.course_img} alt="" />
+    <img src="../images/api2.jpg"} alt="" />
           <div class="courseInfo">
             <p>${course.title}</p>
             <div class="courseFormat">
@@ -38,7 +40,7 @@ async function getAllCourses() {
             </div>
             <div class="courseFooter">
               <div>
-                <button class="viewCourse" onclick="getCourseDetails(${course.courseId})">view course</button>
+                <button class="viewCourse" onclick="getCourseDetails(${course.id})">view course</button>
               </div>
               <p class="price">${course.price}</p>
             </div>
@@ -46,6 +48,46 @@ async function getAllCourses() {
   `;
     document.querySelector(".courseCards").appendChild(courses);
   });
+}
+
+async function getCourseDetails(id) {
+  document.querySelector(".loaderContainer").style.display = "flex";
+  const response = await fetch(`https://onlinelearn.pythonanywhere.com/course_detail/${id}/`);
+  const data = await response.json();
+  if (response) {
+    document.querySelector(".loaderContainer").style.display = "none";
+  }
+  if (response.ok) {
+    courseModal.style.display = "flex";
+    courseModal.innerHTML = `
+    <div class="courseInfomation">
+            <i class="ri-close-circle-line closeModal" onclick="closeModal()"></i>
+            <h3>${data.title}</h3>
+            <p>${data.description}</p>
+            <div class="courseFormat">
+                <ul>
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>${data.duration}</span>
+                    </li>
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>${data.lessonDuration}</span>
+                    </li>
+                    <li>
+                        <i class="ri-checkbox-circle-line"></i>
+                        <span>${data.mode}</span>
+                    </li>
+                </ul>
+                <p class="level">${data.level}</p>
+            </div>
+        </div>
+    `;
+  }
+}
+
+function closeModal() {
+  courseModal.style.display = "none";
 }
 
 async function getTracks() {
