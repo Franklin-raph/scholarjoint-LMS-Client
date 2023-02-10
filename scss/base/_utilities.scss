@@ -1,37 +1,48 @@
-.container{
+.container {
     max-width: 1200px;
     padding: 0 30px;
     margin: 0 auto;
-    overflow: auto;
 }
 
 // Margin and padding classes
-$spaceAmounts: (1,2,3,4,5);
+$spaceAmounts: (
+    1,
+    2,
+    3,
+    4,
+    5
+);
 
 @each $space in $spaceAmounts {
-    .m-#{$space}{
+    .m-#{$space} {
         margin: #{$space}rem;
     }
-    .mt-#{$space}{
+
+    .mt-#{$space} {
         margin-top: #{$space}rem;
     }
-    .mb-#{$space}{
+
+    .mb-#{$space} {
         margin-bottom: #{$space}rem;
     }
-    .my-#{$space}{
+
+    .my-#{$space} {
         margin: #{$space}rem 0;
     }
-    .mx-#{$space}{
+
+    .mx-#{$space} {
         margin:0 #{$space}rem;
     }
 
-    .p-#{$space}{
+    .p-#{$space} {
         margin: #{$space}rem;
     }
-    .py-#{$space}{
+
+    .py-#{$space} {
         margin: #{$space}rem 0;
     }
-    .px-#{$space}{
+
+    .px-#{$space} {
         margin: 0 #{$space}rem;
     }
 }

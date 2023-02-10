@@ -19,6 +19,7 @@
         }
     }
 
+
     #courses {
 
         .topInfo {
@@ -27,6 +28,11 @@
                 font-size: 18px;
                 width: 70%;
             }
+        }
+
+        .courseCards {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
         }
     }
 
@@ -280,6 +286,12 @@
 
 
 @media screen and (max-width: 480px) {
+
+    #courses {
+        .courseCards {
+            grid-template-columns: 1fr;
+        }
+    }
 
     .step-timeline {
 

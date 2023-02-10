@@ -49,11 +49,25 @@
         opacity: 1 !important;
         pointer-events: auto !important;
       }
+
+      .viewCourse {
+        all: unset;
+        cursor: pointer;
+        border: 1px solid #eee;
+        padding: 4px 9px;
+        transition: .5s;
+      }
+
+      .viewCourse:hover {
+        background-color: #1AC888;
+        transition: .5s;
+        color: #fff;
+      }
     </style>
   </head>
   <body>
     <header class="hero">
-      <div class="container">
+      <div class="">
         <nav>
           <h1 class="logo">SJL</h1>
           <div class="toggler" onclick="toggleNav()">
@@ -73,7 +87,7 @@
           </ul>
         </nav>
 
-        <div class="hero-content mt-5">
+        <div class="hero-content mt-5 container">
           <div>
             <h1>Everything you need to LEARN.</h1>
             <p class="my-1">
@@ -203,185 +217,7 @@
         <p>We offer a variety of curses like Html, CSS, JavaScript, React, Python, Django, Node, Express, e.t.c</p>
       </div>
       <div class="courseCards">
-        <!-- <div class="course">
-          <img src="/images/images.jfif" alt="" />
-          <div class="courseInfo">
-            <p>Front End Web Development for beginners</p>
-            <div class="courseFormat">
-              <ul>
-                <li>
-                  <i class="ri-checkbox-circle-line"></i>
-                  <span>Online</span>
-                </li>
-                <li>
-                  <i class="ri-checkbox-circle-line"></i>
-                  <span>8 Weeks intensive training</span>
-                </li>
-                <li>
-                  <i class="ri-checkbox-circle-line"></i>
-                  <span>2 Hours / Meeting</span>
-                </li>
-              </ul>
-              <p class="level">Newbie</p>
-            </div>
-            <div class="courseFooter">
-              <div>
-                <button class="viewCourse">view course</button>
-              </div>
-              <p class="price">$0.1</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="course">
-          <img src="/images/images (2).png" alt="" />
-          <div class="courseInfo">
-            <p>Back End web Development</p>
-            <div class="courseFormat">
-              <ul>
-                <li>
-                  <i class="ri-checkbox-circle-line"></i>
-                  <span>Online</span>
-                </li>
-                <li>
-                  <i class="ri-checkbox-circle-line"></i>
-                  <span>8 Weeks intensive training</span>
-                </li>
-                <li>
-                  <i class="ri-checkbox-circle-line"></i>
-                  <span>2 Hours / Meeting</span>
-                </li>
-              </ul>
-              <p class="level">Intermediate</p>
-            </div>
-            <div class="courseFooter">
-              <div>
-                <button class="viewCourse">view course</button>
-              </div>
-              <p class="price">$0.1</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="course">
-          <img src="/images/images (1).png" alt="" />
-          <div class="courseInfo">
-            <p>Full Stack Web Development</p>
-            <div class="courseFormat">
-              <ul>
-                <li>
-                  <i class="ri-checkbox-circle-line"></i>
-                  <span>Online</span>
-                </li>
-                <li>
-                  <i class="ri-checkbox-circle-line"></i>
-                  <span>12 Weeks intensive training</span>
-                </li>
-                <li>
-                  <i class="ri-checkbox-circle-line"></i>
-                  <span>2 Hours / Meeting</span>
-                </li>
-              </ul>
-              <p class="level">Intermediate</p>
-            </div>
-            <div class="courseFooter">
-              <div>
-                <button class="viewCourse">view course</button>
-              </div>
-              <p class="price">$0.1</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="course">
-          <img src="/images/api.jpg" alt="" />
-          <div class="courseInfo">
-            <p>API Development</p>
-            <div class="courseFormat">
-              <ul>
-                <li>
-                  <i class="ri-checkbox-circle-line"></i>
-                  <span>Online</span>
-                </li>
-                <li>
-                  <i class="ri-checkbox-circle-line"></i>
-                  <span>12 Weeks intensive training</span>
-                </li>
-                <li>
-                  <i class="ri-checkbox-circle-line"></i>
-                  <span>2 Hours / Meeting</span>
-                </li>
-              </ul>
-              <p class="level">Intermediate</p>
-            </div>
-            <div class="courseFooter">
-              <div>
-                <button class="viewCourse">view course</button>
-              </div>
-              <p class="price">$0.1</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="course">
-          <img src="/images/images (1).jfif" alt="" height="150rem" />
-          <div class="courseInfo">
-            <p>Mobile App Development</p>
-            <div class="courseFormat">
-              <ul>
-                <li>
-                  <i class="ri-checkbox-circle-line"></i>
-                  <span>Online</span>
-                </li>
-                <li>
-                  <i class="ri-checkbox-circle-line"></i>
-                  <span>8 Weeks intensive training</span>
-                </li>
-                <li>
-                  <i class="ri-checkbox-circle-line"></i>
-                  <span>2 Hours / Meeting</span>
-                </li>
-              </ul>
-              <p class="level">Intermediate</p>
-            </div>
-            <div class="courseFooter">
-              <div>
-                <button class="viewCourse">view course</button>
-              </div>
-              <p class="price">$0.1</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="course">
-          <img src="/images/download.jpg" alt="" />
-          <div class="courseInfo">
-            <p>React Js Complete Bootcamp - Zero to Hero in React Js</p>
-            <div class="courseFormat">
-              <ul>
-                <li>
-                  <i class="ri-checkbox-circle-line"></i>
-                  <span>Text</span>
-                </li>
-                <li>
-                  <i class="ri-checkbox-circle-line"></i>
-                  <span>Video</span>
-                </li>
-                <li>
-                  <i class="ri-checkbox-circle-line"></i>
-                  <span>Text</span>
-                </li>
-              </ul>
-              <p class="level">Advanced</p>
-            </div>
-            <div class="courseFooter">
-              <div>
-                <button class="viewCourse">view course</button>
-              </div>
-              <p class="price">$0.1</p>
-            </div>
-          </div>
-        </div> -->
+        
       </div>
     </section>
 

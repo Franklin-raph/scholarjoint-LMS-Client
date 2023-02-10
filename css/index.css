@@ -37,7 +37,6 @@ section {
   max-width: 1200px;
   padding: 0 30px;
   margin: 0 auto;
-  overflow: auto;
 }
 
 .m-1 {
@@ -369,19 +368,20 @@ section {
 }
 
 .hero {
-  background: linear-gradient(#003791, #045DE9);
-  color: #fff;
   -webkit-clip-path: polygon(100% 0, 100% 86%, 50% 100%, 0 86%, 0 0);
           clip-path: polygon(100% 0, 100% 86%, 50% 100%, 0 86%, 0 0);
   height: 650px;
   margin-bottom: 4rem;
+  background-color: #F1F1F1;
 }
 .hero nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 3rem;
-  padding: 30px 0;
+  padding: 30px 60px;
+  background-color: #fff;
+  width: 100%;
 }
 .hero nav button {
   all: unset;
@@ -406,7 +406,7 @@ section {
   gap: 18px;
 }
 .hero li a {
-  color: #fff;
+  color: #000;
 }
 .hero li a:hover {
   color: #1ac888;
@@ -419,20 +419,10 @@ section {
 }
 .hero-content img {
   width: 50%;
-  -webkit-animation: 16s linear 0s moveY infinite;
-          animation: 16s linear 0s moveY infinite;
+  animation: 16s linear 0s moveY infinite;
 }
 .hero-content h1 {
   font-size: 50px;
-}
-
-@-webkit-keyframes moveY {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10%);
-  }
 }
 
 @keyframes moveY {
@@ -447,17 +437,6 @@ section {
   max-height: 100vh !important;
 }
 
-@-webkit-keyframes movedown {
-  0% {
-    opacity: 1;
-    transform: translateY(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
-
 @keyframes movedown {
   0% {
     opacity: 1;
@@ -466,14 +445,6 @@ section {
   100% {
     opacity: 1;
     transform: translateY(0px);
-  }
-}
-@-webkit-keyframes moveline {
-  0% {
-    height: 0;
-  }
-  100% {
-    height: 100%;
   }
 }
 @keyframes moveline {
@@ -512,25 +483,20 @@ section {
   padding: 10px 50px;
   position: relative;
   width: 50%;
-  -webkit-animation: movedown 1s linear forwards;
-          animation: movedown 1s linear forwards;
+  animation: movedown 1s linear forwards;
   opacity: 0;
 }
 .step-timeline .step-container:nth-child(1) {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
+  animation-delay: 0s;
 }
 .step-timeline .step-container:nth-child(2) {
-  -webkit-animation-delay: 2s;
-          animation-delay: 2s;
+  animation-delay: 2s;
 }
 .step-timeline .step-container:nth-child(3) {
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  animation-delay: 3s;
 }
 .step-timeline .step-container:nth-child(4) {
-  -webkit-animation-delay: 5s;
-          animation-delay: 5s;
+  animation-delay: 5s;
 }
 .step-timeline .step-container .number {
   color: #000;
@@ -555,13 +521,12 @@ section {
   position: absolute;
   width: 5px;
   height: 100%;
-  background-color: #80B1FF;
+  background-color: #80b1ff;
   top: 0;
   left: 50%;
   margin-left: -3px;
   z-index: -1;
-  -webkit-animation: moveline 6s linear forwards;
-          animation: moveline 6s linear forwards;
+  animation: moveline 6s linear forwards;
 }
 .step-timeline .text-box {
   padding: 20px 30px;
@@ -666,12 +631,13 @@ section {
 }
 #courses .courseCards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   align-items: center;
   justify-content: center;
-  /* gap: 20px; */
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
 }
-#courses .courseCards p, #courses .courseCards li {
+#courses .courseCards p,
+#courses .courseCards li {
   color: #616161;
 }
 #courses .courseCards li {
@@ -795,6 +761,10 @@ footer .contacts a div {
     font-size: 18px;
     width: 70%;
   }
+  #courses .courseCards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
   #timeSection .timeSectionParagraph {
     font-size: 18px;
     width: 70%;
@@ -824,16 +794,11 @@ footer .contacts a div {
     gap: 7px;
   }
   #signupmodal .verifyEmailModal,
-#signupmodal .error {
+  #signupmodal .error {
     width: 50%;
   }
   #signupmodal .loaderContainer .loadingGif {
     width: 40%;
-  }
-
-  #courses .courseCards {
-    grid-template-columns: repeat(3, 1fr);
-    /* gap: 20px; */
   }
 }
 @media screen and (max-width: 700px) {
@@ -863,7 +828,7 @@ footer .contacts a div {
     left: 0;
   }
   .step-timeline .left-container .number,
-.step-timeline .right-container .number {
+  .step-timeline .right-container .number {
     left: 10px;
   }
   .step-timeline::after {
@@ -875,7 +840,7 @@ footer .contacts a div {
     padding: 10px 25px 10px 80px;
   }
   .step-timeline .left-container-arrow,
-.step-timeline .right-container-arrow {
+  .step-timeline .right-container-arrow {
     border-right: 15px solid #1380ED;
     border-left: 0;
     left: -15px;
@@ -960,19 +925,17 @@ footer .contacts a div {
     width: 380px;
   }
   #signupmodal .verifyEmailModal,
-#signupmodal .error {
+  #signupmodal .error {
     width: 70%;
   }
   #signupmodal .loaderContainer .loadingGif {
     width: 80%;
   }
-
-  #courses .courseCards {
-    grid-template-columns: repeat(2, 1fr);
-    /* gap: 20px; */
-  }
 }
 @media screen and (max-width: 480px) {
+  #courses .courseCards {
+    grid-template-columns: 1fr;
+  }
   .step-timeline .step-container {
     width: 100%;
     padding: 10px 25px 10px 80px;
@@ -1010,7 +973,7 @@ footer .contacts a div {
     width: 100%;
   }
   #signupmodal .verifyEmailModal,
-#signupmodal .error {
+  #signupmodal .error {
     width: 90%;
   }
   #signupmodal .loadingGif {
@@ -1030,10 +993,5 @@ footer .contacts a div {
   #features p {
     font-size: 14px;
     line-height: 25px;
-  }
-
-  #courses .courseCards {
-    grid-template-columns: repeat(1, 1fr);
-    /* gap: 20px; */
   }
 }/*# sourceMappingURL=index.css.map */

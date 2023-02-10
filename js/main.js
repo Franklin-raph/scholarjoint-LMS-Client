@@ -25,7 +25,7 @@ async function getAllCourses() {
               <ul>
                 <li>
                   <i class="ri-checkbox-circle-line"></i>
-                  <span>${course.mode}</span>
+                  <span>Online</span>
                 </li>
                 <li>
                   <i class="ri-checkbox-circle-line"></i>
@@ -33,7 +33,7 @@ async function getAllCourses() {
                 </li>
                 <li>
                   <i class="ri-checkbox-circle-line"></i>
-                  <span>${course.lessonDuration}</span>
+                  <span>${course.lesson_duration}</span>
                 </li>
               </ul>
               <p class="level">${course.level}</p>
@@ -42,7 +42,6 @@ async function getAllCourses() {
               <div>
                 <button class="viewCourse" onclick="getCourseDetails(${course.id})">view course</button>
               </div>
-              <p class="price">${course.price}</p>
             </div>
           </div>
   `;
@@ -72,7 +71,7 @@ async function getCourseDetails(id) {
                     </li>
                     <li>
                         <i class="ri-checkbox-circle-line"></i>
-                        <span>${data.lessonDuration}</span>
+                        <span>${data.lesson_duration}</span>
                     </li>
                     <li>
                         <i class="ri-checkbox-circle-line"></i>
