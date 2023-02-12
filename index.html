@@ -24,6 +24,7 @@
         justify-content: center;
         align-items: center;
       }
+
       #courseModal .courseInfomation {
         background-color: #fff;
         display: flex;
@@ -32,8 +33,11 @@
         flex-direction: column;
         padding: 2rem 3rem;
         position: relative;
-        width: 30%;
+        width: 80%;
+        height: 80vh;
+        overflow-y:scroll ;
       }
+
       #courseModal .courseInfomation .closeModal {
         position: absolute;
         top: 3%;
@@ -62,6 +66,65 @@
         background-color: #1AC888;
         transition: .5s;
         color: #fff;
+      }
+
+      .courseImg{
+        width: 100% !important;
+        height: 150px;
+        object-fit: cover;
+      }
+
+      #courses .courseCards .course{
+        width: 80%;
+        overflow: hidden;
+      }
+
+      .courseInfoContent{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 12rem;
+      }
+
+      .courseInfoContent img{
+        object-fit: contain;
+      }
+
+      .courseInfoContent{
+        border-bottom:  1px solid #ccc;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+      }
+
+      .courseFormat ul li{
+        display: flex;
+        align-items: center;
+      }
+
+      .courseFormat p{
+        font-weight: bold;
+        font-size: 16px;
+        margin-right: 18px;
+      }
+
+      hr{
+        border: 1px solid #ccc;
+      }
+
+      @media screen and (max-width:992px) {
+          .courseInfoContent img{
+          display: none;
+        }
+      }
+
+      @media screen and (max-width:768px) {
+          #courseModal .courseInfomation {
+          width: 80%;
+          height: 100vh;
+          overflow-y:scroll;
+          padding-top: 9rem;
+        }
       }
     </style>
   </head>
@@ -320,34 +383,7 @@
     </div>
 
     <div id="courseModal">
-      <!-- <div class="courseInfomation">
-        <i class="ri-close-circle-line closeModal"></i>
-        <h3>${data.title}</h3>
-        <p>${data.description}</p>
-        <div class="courseFormat">
-          <ul>
-            <li>
-              <i class="ri-checkbox-circle-line"></i>
-              <span>${data.duration}</span>
-            </li>
-            <li>
-              <i class="ri-checkbox-circle-line"></i>
-              <span>${data.lessonDuration}</span>
-            </li>
-            <li>
-              <i class="ri-checkbox-circle-line"></i>
-              <span>${data.mode}</span>
-            </li>
-          </ul>
-          <p class="level">${data.level}</p>
-        </div>
-        <button>
-          <a href="https://paystack.com/pay/yxrq24ctfo">
-            <i class="ri-checkbox-circle-line"></i>
-            <p>${data.price}</p>
-          </a>
-        </button>
-      </div> -->
+      
     </div>
 
     <script src="/js/jquery.js"></script>

@@ -16,9 +16,9 @@ async function getAllCourses() {
   data.forEach((course) => {
     const courses = document.createElement("div");
     courses.classList.add("course");
-    // <img src=${course.course_img} alt="" />
+    // 
     courses.innerHTML += `
-    <img src="../images/api2.jpg"} alt="" />
+    <img src=${course.course_img} alt="Course Image" class="courseImg"/>
           <div class="courseInfo">
             <p>${course.title}</p>
             <div class="courseFormat">
@@ -61,24 +61,34 @@ async function getCourseDetails(id) {
     courseModal.innerHTML = `
     <div class="courseInfomation">
             <i class="ri-close-circle-line closeModal" onclick="closeModal()"></i>
-            <h3>${data.title}</h3>
-            <p>${data.description}</p>
+            <div class="courseInfoContent">
+              <img src=${data.course_img} alt="Course Image" class="courseImg"/>
+              <div>
+                <h3>${data.title}</h3>
+                <p>${data.description}</p>
+              </div>
+            </div>
+            <hr />
             <div class="courseFormat">
                 <ul>
                     <li>
-                        <i class="ri-checkbox-circle-line"></i>
+                        <p>Corse Duration</p>
                         <span>${data.duration}</span>
                     </li>
                     <li>
-                        <i class="ri-checkbox-circle-line"></i>
+                        <p>Lesson Duration/Day</p>
                         <span>${data.lesson_duration}</span>
                     </li>
                     <li>
-                        <i class="ri-checkbox-circle-line"></i>
-                        <span>${data.mode}</span>
+                        <p>Corse Mode or Trainig Mode</p>
+                        <span>Online</span>
+                    </li>
+                    <li>
+                        <p>Level</p>
+                        <span class="level">${data.level}</span>
                     </li>
                 </ul>
-                <p class="level">${data.level}</p>
+                
             </div>
         </div>
     `;
