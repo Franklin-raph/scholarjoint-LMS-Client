@@ -210,7 +210,7 @@
 
         nav {
             position: relative;
-            padding: 30px;
+            padding: 18px 30px;
             width: 100%;
 
             button {
@@ -220,15 +220,21 @@
             .toggler {
                 display: block;
                 cursor: pointer;
+
+                span {
+                    background-color: #fff;
+                }
             }
         }
 
         ul {
             position: absolute;
-            background-color: #{$white-color};
+            background-color: #1380ED;
             top: 85%;
             text-align: center;
-            width: 86%;
+            width: 100%;
+            left: 0;
+            right: 0;
             z-index: 1;
             max-height: 0;
             overflow: hidden;
@@ -245,10 +251,6 @@
 
             li:last-child {
                 padding-bottom: 16px;
-            }
-
-            a {
-                color: #{$black-color};
             }
         }
     }

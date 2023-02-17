@@ -1,17 +1,18 @@
 .hero {
     // @include set-background($primary);
-    clip-path: polygon(100% 0, 100% 86%, 50% 100%, 0 86%, 0 0);
-    height: 650px;
+    clip-path: polygon(100% 0, 100% 96%, 50% 100%, 0 96%, 0 0);
+    // height: 650px;
     margin-bottom: 4rem;
     background-color: #F1F1F1;
+    padding-bottom: 4rem;
 
     nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 3rem;
-        padding: 30px 60px;
-        background-color: #fff;
+        padding: 20px 60px;
+        background-color: #1380ED;
         width: 100%;
 
         button {
@@ -44,7 +45,7 @@
     li {
 
         a {
-            color: #000;
+            color: #fff;
         }
 
         a:hover {

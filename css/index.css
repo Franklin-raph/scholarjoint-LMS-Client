@@ -25,10 +25,6 @@ ul {
   list-style: none;
 }
 
-img {
-  width: 100%;
-}
-
 section {
   margin-bottom: 5rem;
 }
@@ -368,19 +364,19 @@ section {
 }
 
 .hero {
-  -webkit-clip-path: polygon(100% 0, 100% 86%, 50% 100%, 0 86%, 0 0);
-          clip-path: polygon(100% 0, 100% 86%, 50% 100%, 0 86%, 0 0);
-  height: 650px;
+  -webkit-clip-path: polygon(100% 0, 100% 96%, 50% 100%, 0 96%, 0 0);
+          clip-path: polygon(100% 0, 100% 96%, 50% 100%, 0 96%, 0 0);
   margin-bottom: 4rem;
   background-color: #F1F1F1;
+  padding-bottom: 4rem;
 }
 .hero nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 3rem;
-  padding: 30px 60px;
-  background-color: #fff;
+  padding: 20px 60px;
+  background-color: #1380ED;
   width: 100%;
 }
 .hero nav button {
@@ -406,7 +402,7 @@ section {
   gap: 18px;
 }
 .hero li a {
-  color: #000;
+  color: #fff;
 }
 .hero li a:hover {
   color: #1ac888;
@@ -881,7 +877,7 @@ footer .contacts a div {
 @media screen and (max-width: 600px) {
   .hero nav {
     position: relative;
-    padding: 30px;
+    padding: 18px 30px;
     width: 100%;
   }
   .hero nav button {
@@ -891,12 +887,17 @@ footer .contacts a div {
     display: block;
     cursor: pointer;
   }
+  .hero nav .toggler span {
+    background-color: #fff;
+  }
   .hero ul {
     position: absolute;
-    background-color: #fff;
+    background-color: #1380ED;
     top: 85%;
     text-align: center;
-    width: 86%;
+    width: 100%;
+    left: 0;
+    right: 0;
     z-index: 1;
     max-height: 0;
     overflow: hidden;
@@ -911,9 +912,6 @@ footer .contacts a div {
   }
   .hero ul li:last-child {
     padding-bottom: 16px;
-  }
-  .hero ul a {
-    color: #000;
   }
   #signupmodal form {
     width: 85%;

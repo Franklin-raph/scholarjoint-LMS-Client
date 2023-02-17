@@ -34,8 +34,8 @@
         padding: 2rem 3rem;
         position: relative;
         width: 80%;
-        height: 80vh;
-        overflow-y:scroll ;
+        /* height: 80vh; */
+        /* overflow-y:scroll ; */
       }
 
       #courseModal .courseInfomation .closeModal {
@@ -84,7 +84,7 @@
         align-items: flex-start;
         justify-content: center;
         gap: 20px;
-        margin-top: 12rem;
+        /* margin-top: 12rem; */
       }
 
       .courseInfoContent img{
@@ -112,19 +112,31 @@
         border: 1px solid #ccc;
       }
 
+      .logo{
+        width: 3%;
+      }
+
       @media screen and (max-width:992px) {
           .courseInfoContent img{
           display: none;
         }
+
+        .logo{
+        width: 5%;
+      }
       }
 
       @media screen and (max-width:768px) {
           #courseModal .courseInfomation {
-          width: 80%;
-          height: 100vh;
+          width: 92%;
+          /* height: 100vh; */
           overflow-y:scroll;
-          padding-top: 9rem;
+          /* padding-top: 9rem; */
         }
+
+        .logo{
+        width: 7%;
+      }
       }
     </style>
   </head>
@@ -132,11 +144,8 @@
     <header class="hero">
       <div class="">
         <nav>
-          <h1 class="logo">SJL</h1>
+          <img class="logo" src="./images/Scholarsjoint-logo-favicon.png" alt="">
           <div class="toggler" onclick="toggleNav()">
-            <!-- <i class="ri-layout-grid-fill"></i>
-                    <i onclick="openNav()">open</i>
-                    <i onclick="closeNav()">close</i> -->
             <span></span>
             <span></span>
             <span></span>
@@ -160,7 +169,7 @@
             <button class="btn-primary getData">Learn More</button>
             <button class="btn-secondary signupBtn">Sign Up</button>
           </div>
-          <img src="/images/teaching-img.png" />
+          <img src="/images/programming_preview.jpg" />
         </div>
       </div>
     </header>
@@ -377,7 +386,7 @@
 
       <div class="verifyEmailModal">
         <i class="ri-mail-check-line"></i>
-        <p>A verification mail has been sent to you at sososo&so.com</p>
+        <p>A verification mail has been sent to you </p>
         <button class="closeEmailVerificationModal">Close</button>
       </div>
     </div>
@@ -385,6 +394,17 @@
     <div id="courseModal">
       
     </div>
+
+    <!-- <script>
+
+      async function getCountries(){
+        const response = await fetch('https://restcountries.com/v3.1/all')
+        const data = await response.json()
+        console.log(data)
+      }
+
+      getCountries()
+    </script> -->
 
     <script src="/js/jquery.js"></script>
     <script src="/js/slick.js"></script>
